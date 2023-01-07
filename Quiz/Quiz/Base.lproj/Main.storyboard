@@ -52,6 +52,10 @@
                             <constraint firstItem="3rf-oQ-E8d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="vE1-tN-yu7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="1cb-rP-ebd" id="Z9B-PQ-oDP"/>
+                        <outlet property="questionLabel" destination="3rf-oQ-E8d" id="Kig-mp-bSl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
