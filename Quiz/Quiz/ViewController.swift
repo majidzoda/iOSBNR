@@ -29,7 +29,12 @@ class ViewController: UIViewController {
     
     @IBAction func showAnswer(_ sender: UIButton) {
         let answer: String = answers[currentQuestionIndex]
-        answerLabel.text = answerg
+        answerLabel.text = answer
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        questionLabel.text = questions[currentQuestionIndex]
     }
 }
 
