@@ -1,14 +1,14 @@
 //
-//  QuizTests.swift
-//  QuizTests
+//  WorldTrotterTests.swift
+//  WorldTrotterTests
 //
-//  Created by Firdavsii Majidzoda on 1/6/23.
+//  Created by Firdavsii Majidzoda on 1/7/23.
 //
 
 import XCTest
-@testable import Quiz
+@testable import WorldTrotter
 
-class QuizTests: XCTestCase {
+class WorldTrotterTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

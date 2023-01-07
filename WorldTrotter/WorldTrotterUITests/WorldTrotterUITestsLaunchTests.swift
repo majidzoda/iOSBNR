@@ -1,13 +1,13 @@
 //
-//  QuizUITestsLaunchTests.swift
-//  QuizUITests
+//  WorldTrotterUITestsLaunchTests.swift
+//  WorldTrotterUITests
 //
-//  Created by Firdavsii Majidzoda on 1/6/23.
+//  Created by Firdavsii Majidzoda on 1/7/23.
 //
 
 import XCTest
 
-class QuizUITestsLaunchTests: XCTestCase {
+class WorldTrotterUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

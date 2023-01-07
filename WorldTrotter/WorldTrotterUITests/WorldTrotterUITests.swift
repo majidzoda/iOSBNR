@@ -1,13 +1,13 @@
 //
-//  QuizUITests.swift
-//  QuizUITests
+//  WorldTrotterUITests.swift
+//  WorldTrotterUITests
 //
-//  Created by Firdavsii Majidzoda on 1/6/23.
+//  Created by Firdavsii Majidzoda on 1/7/23.
 //
 
 import XCTest
 
-class QuizUITests: XCTestCase {
+class WorldTrotterUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
