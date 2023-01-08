@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Convert-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WorldTrotter" customModuleProvider="target" sceneMemberID="viewController">
@@ -63,13 +63,13 @@
                             <constraint firstItem="xb0-uA-RW8" firstAttribute="top" secondItem="YYX-pN-5tw" secondAttribute="bottom" constant="8" id="ydK-D0-fro"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="q0L-vw-nDd"/>
+                    <tabBarItem key="tabBarItem" title="Convert" image="ConvertIcon" id="q0L-vw-nDd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-155" y="-982"/>
         </scene>
-        <!--Item-->
+        <!--Map-->
         <scene sceneID="XOj-NF-lIz">
             <objects>
                 <viewController id="hg1-sY-84y" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Item" id="c5f-h3-Cuu"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="MapIcon" id="c5f-h3-Cuu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bH1-90-DYu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,6 +103,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ConvertIcon" width="48.5" height="32.5"/>
+        <image name="MapIcon" width="48.5" height="32.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
