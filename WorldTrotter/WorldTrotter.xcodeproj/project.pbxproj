@@ -17,6 +17,7 @@
 		91A0E389296A10030086E534 /* WorldTrotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0E388296A10030086E534 /* WorldTrotterUITests.swift */; };
 		91A0E38B296A10030086E534 /* WorldTrotterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A0E38A296A10030086E534 /* WorldTrotterUITestsLaunchTests.swift */; };
 		91B605F0296B62AA0071B4A3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B605EF296B62AA0071B4A3 /* MapViewController.swift */; };
+		91B605F2296B751F0071B4A3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B605F1296B751F0071B4A3 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		91A0E388296A10030086E534 /* WorldTrotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITests.swift; sourceTree = "<group>"; };
 		91A0E38A296A10030086E534 /* WorldTrotterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldTrotterUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		91B605EF296B62AA0071B4A3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		91B605F1296B751F0071B4A3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				91A0E367296A10020086E534 /* AppDelegate.swift */,
 				91A0E369296A10020086E534 /* SceneDelegate.swift */,
+				91B605F1296B751F0071B4A3 /* QuizViewController.swift */,
 				91A0E36B296A10020086E534 /* ConversionViewController.swift */,
 				91A0E36D296A10020086E534 /* Main.storyboard */,
 				91B605EF296B62AA0071B4A3 /* MapViewController.swift */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B605F2296B751F0071B4A3 /* QuizViewController.swift in Sources */,
 				91A0E36C296A10020086E534 /* ConversionViewController.swift in Sources */,
 				91A0E368296A10020086E534 /* AppDelegate.swift in Sources */,
 				91A0E36A296A10020086E534 /* SceneDelegate.swift in Sources */,
