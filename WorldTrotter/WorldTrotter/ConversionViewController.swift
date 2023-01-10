@@ -56,12 +56,26 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    /*
+    Chapter6: Text Input and Delegation - Bronze Challenge p. 251: Disallow Alphabetic Characters
+    Currently, the user can enter alphabetic characters either by using a Bluetooth keyboard or by
+    pasting copied text into the text field. Fix this issue. Hint: You will want to use the CharacterSet
+    type.
+     */
+    
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool {
         let existingTextHasDecimalSeperator = textField.text?.range(of: ".")
         let replacementTextHasDecimalSeperator = string.range(of: ".")
-        if existingTextHasDecimalSeperator != nil, replacementTextHasDecimalSeperator != nil {
+        /*
+        Chapter6: Text Input and Delegation - Bronze Challenge p. 251: Disallow Alphabetic Characters
+        Currently, the user can enter alphabetic characters either by using a Bluetooth keyboard or by
+        pasting copied text into the text field. Fix this issue. Hint: You will want to use the CharacterSet
+        type.
+         */
+        let replacementIsNumber = CharacterSet(charactersIn: string).isSubset(of: CharacterSet.letters)
+        if (existingTextHasDecimalSeperator != nil && replacementTextHasDecimalSeperator != nil) || (replacementIsNumber && string != ""){
             return false
         } else {
             return true
