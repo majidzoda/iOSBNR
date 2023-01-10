@@ -1,7 +1,7 @@
 import MapKit
 import UIKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     var mapVIew: MKMapView!
     override func loadView() {
         // Create a map view
@@ -27,6 +27,27 @@ class MapViewController: UIViewController {
         topConstraint.isActive = true
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
+        
+        /*
+         Chapter6: Text Input and Delegation - Silver Challenge p. 252: Displaying the User’s Region
+         Display and zoom in on the user’s location on the map. MKMapView has a mechanism for displaying a blue dot annotation on the
+         map, but there is no built-in way to zoom in on that location. To get this to work, you will need to do a few things:
+         
+            Add a “Privacy – Location When In Use Usage Description” key to your application’s Info.plist. This key is associated with
+            a description that tells your users why you will be accessing their location information. See Chapter 15 for another
+            example of adding a privacy description to your applications.
+         
+            Ask the user for permission to find their location. You will need to add a property to MapViewController for a
+            CLLocationManager instance and call requestWhenInUseAuthorization() when the MapViewController’s view appears. This will
+            present an alert to the user with the usage description requesting their permission to get their location.
+         
+            Use the user’s location to zoom in on their map region. To do this, assign the map’s delegate property. Look through the
+            documentation for MKMapViewDelegate and find the appropriate callback to get informed when the user’s location has been
+            updated. Implement this method to set the region on the map, either directly or using setRegion(_:animated:).
+         */
+        
+        mapVIew.delegate = self
+        CLLocationManager().requestWhenInUseAuthorization()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,5 +66,13 @@ class MapViewController: UIViewController {
         default:
             break
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        print("update location")
+        let mapCam = MKMapCamera(lookingAtCenter: mapView.userLocation.coordinate, fromDistance: 2.0, pitch: 2.0, heading: 2.0)
+        mapView.setCamera(mapCam, animated: true)
+       
+        
     }
 }
