@@ -7,7 +7,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func switchToggle(_ sender: UISwitch) {
+    @IBAction func buttonTapped(_ sender: UISwitch) {
         print("Called buttonTapped(_:)")
     }
 }
