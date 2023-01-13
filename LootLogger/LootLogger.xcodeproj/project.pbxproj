@@ -16,6 +16,7 @@
 		9191D9D72971BFCB00B70529 /* LootLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9D62971BFCB00B70529 /* LootLoggerUITests.swift */; };
 		9191D9D92971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9D82971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift */; };
 		9191D9E62971C16800B70529 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9E52971C16800B70529 /* ItemsViewController.swift */; };
+		9191D9E82971C32E00B70529 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9E72971C32E00B70529 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9191D9D62971BFCB00B70529 /* LootLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerUITests.swift; sourceTree = "<group>"; };
 		9191D9D82971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9191D9E52971C16800B70529 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		9191D9E72971C32E00B70529 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		9191D9A92971BFCA00B70529 = {
 			isa = PBXGroup;
 			children = (
+				9191D9E72971C32E00B70529 /* Item.swift */,
 				9191D9B42971BFCA00B70529 /* LootLogger */,
 				9191D9CB2971BFCB00B70529 /* LootLoggerTests */,
 				9191D9D52971BFCB00B70529 /* LootLoggerUITests */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9191D9E82971C32E00B70529 /* Item.swift in Sources */,
 				9191D9E62971C16800B70529 /* ItemsViewController.swift in Sources */,
 				9191D9B62971BFCA00B70529 /* AppDelegate.swift in Sources */,
 				9191D9B82971BFCA00B70529 /* SceneDelegate.swift in Sources */,
