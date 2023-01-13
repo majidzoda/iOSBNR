@@ -8,12 +8,18 @@ class ItemsViewController: UITableViewController {
         let newItem = itemStore.createItem()
         
         // Figure out where that item is in the array
-        if let index = itemStore.allItems.firstIndex(of: newItem) {
-            let indexPath = IndexPath(row: index, section: 0)
-            
-            // Insert this new row into the table
-            tableView.insertRows(at: [indexPath], with: .automatic)
+        if itemStore.isLessThan50(newItem) {
+            if let index = itemStore.allItems.lower50.firstIndex(of: newItem) {
+                let indexPath = IndexPath(row: index, section: 0)
+                tableView.insertRows(at: [indexPath], with: .automatic)
+            }
+        } else {
+            if let index = itemStore.allItems.above50.firstIndex(of: newItem) {
+                let indexPath = IndexPath(row: index, section: 1)
+                tableView.insertRows(at: [indexPath], with: .automatic)
+            }
         }
+        
     }
     
     @IBAction func toggleEditingMode(_ sender: UIButton){
@@ -34,8 +40,26 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        if section == 0 {
+            return itemStore.allItems.lower50.count
+        } else {
+            return itemStore.allItems.above50.count
+        }
     }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "<$50"
+        } else {
+            return ">=$50"
+        }
+    }
+    
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create a new or recycled cell
@@ -44,7 +68,7 @@ class ItemsViewController: UITableViewController {
         // Set the text on the cell with the description of the item
         // that is at the nth index of item, where n = row this cell
         // will appear in on the table view
-        let item = itemStore.allItems[indexPath.row]
+        let item = indexPath.section == 0 ? itemStore.allItems.lower50[indexPath.row] : itemStore.allItems.above50[indexPath.row]
         
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "$\(item.valuesInDoller)"
@@ -55,7 +79,7 @@ class ItemsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         // if the table view is asking to commit a delete command...
         if editingStyle == .delete {
-            let item = itemStore.allItems[indexPath.row]
+            let item = indexPath.section == 0 ? itemStore.allItems.lower50[indexPath.row] : itemStore.allItems.above50[indexPath.row]
             
             // Remove the item for the store
             itemStore.removeItem(item)
@@ -66,8 +90,9 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        // Update the model
-        itemStore.moveItem(from: sourceIndexPath.row, to: destinationIndexPath.row)
-        
+        if destinationIndexPath.section != sourceIndexPath.section {
+            // Update the model
+            itemStore.moveItem(from: sourceIndexPath, to: destinationIndexPath)
+        }
     }
 }
