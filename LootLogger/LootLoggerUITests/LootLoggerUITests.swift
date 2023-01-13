@@ -1,13 +1,13 @@
 //
-//  BuggyUITests.swift
-//  BuggyUITests
+//  LootLoggerUITests.swift
+//  LootLoggerUITests
 //
-//  Created by Firdavsii Majidzoda on 1/11/23.
+//  Created by Firdavsii Majidzoda on 1/13/23.
 //
 
 import XCTest
 
-class BuggyUITests: XCTestCase {
+class LootLoggerUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

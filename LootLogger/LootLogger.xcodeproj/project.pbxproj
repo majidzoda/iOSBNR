@@ -7,66 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		914200F3296F7F61001D0F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914200F2296F7F61001D0F61 /* AppDelegate.swift */; };
-		914200F5296F7F61001D0F61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914200F4296F7F61001D0F61 /* SceneDelegate.swift */; };
-		914200F7296F7F61001D0F61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914200F6296F7F61001D0F61 /* ViewController.swift */; };
-		914200FA296F7F61001D0F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914200F8296F7F61001D0F61 /* Main.storyboard */; };
-		914200FC296F7F61001D0F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914200FB296F7F61001D0F61 /* Assets.xcassets */; };
-		914200FF296F7F61001D0F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914200FD296F7F61001D0F61 /* LaunchScreen.storyboard */; };
-		9142010A296F7F62001D0F61 /* BuggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91420109296F7F62001D0F61 /* BuggyTests.swift */; };
-		91420114296F7F62001D0F61 /* BuggyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91420113296F7F62001D0F61 /* BuggyUITests.swift */; };
-		91420116296F7F62001D0F61 /* BuggyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91420115296F7F62001D0F61 /* BuggyUITestsLaunchTests.swift */; };
+		9191D9B62971BFCA00B70529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9B52971BFCA00B70529 /* AppDelegate.swift */; };
+		9191D9B82971BFCA00B70529 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9B72971BFCA00B70529 /* SceneDelegate.swift */; };
+		9191D9BD2971BFCA00B70529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9191D9BB2971BFCA00B70529 /* Main.storyboard */; };
+		9191D9BF2971BFCB00B70529 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9191D9BE2971BFCB00B70529 /* Assets.xcassets */; };
+		9191D9C22971BFCB00B70529 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9191D9C02971BFCB00B70529 /* LaunchScreen.storyboard */; };
+		9191D9CD2971BFCB00B70529 /* LootLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9CC2971BFCB00B70529 /* LootLoggerTests.swift */; };
+		9191D9D72971BFCB00B70529 /* LootLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9D62971BFCB00B70529 /* LootLoggerUITests.swift */; };
+		9191D9D92971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9D82971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift */; };
+		9191D9E62971C16800B70529 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9E52971C16800B70529 /* ItemsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		91420106296F7F62001D0F61 /* PBXContainerItemProxy */ = {
+		9191D9C92971BFCB00B70529 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 914200E7296F7F61001D0F61 /* Project object */;
+			containerPortal = 9191D9AA2971BFCA00B70529 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 914200EE296F7F61001D0F61;
-			remoteInfo = Buggy;
+			remoteGlobalIDString = 9191D9B12971BFCA00B70529;
+			remoteInfo = LootLogger;
 		};
-		91420110296F7F62001D0F61 /* PBXContainerItemProxy */ = {
+		9191D9D32971BFCB00B70529 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 914200E7296F7F61001D0F61 /* Project object */;
+			containerPortal = 9191D9AA2971BFCA00B70529 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 914200EE296F7F61001D0F61;
-			remoteInfo = Buggy;
+			remoteGlobalIDString = 9191D9B12971BFCA00B70529;
+			remoteInfo = LootLogger;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		914200EF296F7F61001D0F61 /* Buggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		914200F2296F7F61001D0F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		914200F4296F7F61001D0F61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		914200F6296F7F61001D0F61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		914200F9296F7F61001D0F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		914200FB296F7F61001D0F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		914200FE296F7F61001D0F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		91420100296F7F61001D0F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91420105296F7F62001D0F61 /* BuggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91420109296F7F62001D0F61 /* BuggyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuggyTests.swift; sourceTree = "<group>"; };
-		9142010F296F7F62001D0F61 /* BuggyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuggyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		91420113296F7F62001D0F61 /* BuggyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuggyUITests.swift; sourceTree = "<group>"; };
-		91420115296F7F62001D0F61 /* BuggyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuggyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9191D9B22971BFCA00B70529 /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9191D9B52971BFCA00B70529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9191D9B72971BFCA00B70529 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9191D9BC2971BFCA00B70529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9191D9BE2971BFCB00B70529 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9191D9C12971BFCB00B70529 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9191D9C32971BFCB00B70529 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9191D9C82971BFCB00B70529 /* LootLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9191D9CC2971BFCB00B70529 /* LootLoggerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerTests.swift; sourceTree = "<group>"; };
+		9191D9D22971BFCB00B70529 /* LootLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LootLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9191D9D62971BFCB00B70529 /* LootLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerUITests.swift; sourceTree = "<group>"; };
+		9191D9D82971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LootLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9191D9E52971C16800B70529 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		914200EC296F7F61001D0F61 /* Frameworks */ = {
+		9191D9AF2971BFCA00B70529 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91420102296F7F62001D0F61 /* Frameworks */ = {
+		9191D9C52971BFCB00B70529 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9142010C296F7F62001D0F61 /* Frameworks */ = {
+		9191D9CF2971BFCB00B70529 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,137 +76,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		914200E6296F7F61001D0F61 = {
+		9191D9A92971BFCA00B70529 = {
 			isa = PBXGroup;
 			children = (
-				914200F1296F7F61001D0F61 /* Buggy */,
-				91420108296F7F62001D0F61 /* BuggyTests */,
-				91420112296F7F62001D0F61 /* BuggyUITests */,
-				914200F0296F7F61001D0F61 /* Products */,
+				9191D9B42971BFCA00B70529 /* LootLogger */,
+				9191D9CB2971BFCB00B70529 /* LootLoggerTests */,
+				9191D9D52971BFCB00B70529 /* LootLoggerUITests */,
+				9191D9B32971BFCA00B70529 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		914200F0296F7F61001D0F61 /* Products */ = {
+		9191D9B32971BFCA00B70529 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				914200EF296F7F61001D0F61 /* Buggy.app */,
-				91420105296F7F62001D0F61 /* BuggyTests.xctest */,
-				9142010F296F7F62001D0F61 /* BuggyUITests.xctest */,
+				9191D9B22971BFCA00B70529 /* LootLogger.app */,
+				9191D9C82971BFCB00B70529 /* LootLoggerTests.xctest */,
+				9191D9D22971BFCB00B70529 /* LootLoggerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		914200F1296F7F61001D0F61 /* Buggy */ = {
+		9191D9B42971BFCA00B70529 /* LootLogger */ = {
 			isa = PBXGroup;
 			children = (
-				914200F2296F7F61001D0F61 /* AppDelegate.swift */,
-				914200F4296F7F61001D0F61 /* SceneDelegate.swift */,
-				914200F6296F7F61001D0F61 /* ViewController.swift */,
-				914200F8296F7F61001D0F61 /* Main.storyboard */,
-				914200FB296F7F61001D0F61 /* Assets.xcassets */,
-				914200FD296F7F61001D0F61 /* LaunchScreen.storyboard */,
-				91420100296F7F61001D0F61 /* Info.plist */,
+				9191D9B52971BFCA00B70529 /* AppDelegate.swift */,
+				9191D9B72971BFCA00B70529 /* SceneDelegate.swift */,
+				9191D9BB2971BFCA00B70529 /* Main.storyboard */,
+				9191D9BE2971BFCB00B70529 /* Assets.xcassets */,
+				9191D9C02971BFCB00B70529 /* LaunchScreen.storyboard */,
+				9191D9C32971BFCB00B70529 /* Info.plist */,
+				9191D9E52971C16800B70529 /* ItemsViewController.swift */,
 			);
-			path = Buggy;
+			path = LootLogger;
 			sourceTree = "<group>";
 		};
-		91420108296F7F62001D0F61 /* BuggyTests */ = {
+		9191D9CB2971BFCB00B70529 /* LootLoggerTests */ = {
 			isa = PBXGroup;
 			children = (
-				91420109296F7F62001D0F61 /* BuggyTests.swift */,
+				9191D9CC2971BFCB00B70529 /* LootLoggerTests.swift */,
 			);
-			path = BuggyTests;
+			path = LootLoggerTests;
 			sourceTree = "<group>";
 		};
-		91420112296F7F62001D0F61 /* BuggyUITests */ = {
+		9191D9D52971BFCB00B70529 /* LootLoggerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				91420113296F7F62001D0F61 /* BuggyUITests.swift */,
-				91420115296F7F62001D0F61 /* BuggyUITestsLaunchTests.swift */,
+				9191D9D62971BFCB00B70529 /* LootLoggerUITests.swift */,
+				9191D9D82971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift */,
 			);
-			path = BuggyUITests;
+			path = LootLoggerUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		914200EE296F7F61001D0F61 /* Buggy */ = {
+		9191D9B12971BFCA00B70529 /* LootLogger */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91420119296F7F62001D0F61 /* Build configuration list for PBXNativeTarget "Buggy" */;
+			buildConfigurationList = 9191D9DC2971BFCB00B70529 /* Build configuration list for PBXNativeTarget "LootLogger" */;
 			buildPhases = (
-				914200EB296F7F61001D0F61 /* Sources */,
-				914200EC296F7F61001D0F61 /* Frameworks */,
-				914200ED296F7F61001D0F61 /* Resources */,
+				9191D9AE2971BFCA00B70529 /* Sources */,
+				9191D9AF2971BFCA00B70529 /* Frameworks */,
+				9191D9B02971BFCA00B70529 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Buggy;
-			productName = Buggy;
-			productReference = 914200EF296F7F61001D0F61 /* Buggy.app */;
+			name = LootLogger;
+			productName = LootLogger;
+			productReference = 9191D9B22971BFCA00B70529 /* LootLogger.app */;
 			productType = "com.apple.product-type.application";
 		};
-		91420104296F7F62001D0F61 /* BuggyTests */ = {
+		9191D9C72971BFCB00B70529 /* LootLoggerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9142011C296F7F62001D0F61 /* Build configuration list for PBXNativeTarget "BuggyTests" */;
+			buildConfigurationList = 9191D9DF2971BFCB00B70529 /* Build configuration list for PBXNativeTarget "LootLoggerTests" */;
 			buildPhases = (
-				91420101296F7F62001D0F61 /* Sources */,
-				91420102296F7F62001D0F61 /* Frameworks */,
-				91420103296F7F62001D0F61 /* Resources */,
+				9191D9C42971BFCB00B70529 /* Sources */,
+				9191D9C52971BFCB00B70529 /* Frameworks */,
+				9191D9C62971BFCB00B70529 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				91420107296F7F62001D0F61 /* PBXTargetDependency */,
+				9191D9CA2971BFCB00B70529 /* PBXTargetDependency */,
 			);
-			name = BuggyTests;
-			productName = BuggyTests;
-			productReference = 91420105296F7F62001D0F61 /* BuggyTests.xctest */;
+			name = LootLoggerTests;
+			productName = LootLoggerTests;
+			productReference = 9191D9C82971BFCB00B70529 /* LootLoggerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9142010E296F7F62001D0F61 /* BuggyUITests */ = {
+		9191D9D12971BFCB00B70529 /* LootLoggerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9142011F296F7F62001D0F61 /* Build configuration list for PBXNativeTarget "BuggyUITests" */;
+			buildConfigurationList = 9191D9E22971BFCB00B70529 /* Build configuration list for PBXNativeTarget "LootLoggerUITests" */;
 			buildPhases = (
-				9142010B296F7F62001D0F61 /* Sources */,
-				9142010C296F7F62001D0F61 /* Frameworks */,
-				9142010D296F7F62001D0F61 /* Resources */,
+				9191D9CE2971BFCB00B70529 /* Sources */,
+				9191D9CF2971BFCB00B70529 /* Frameworks */,
+				9191D9D02971BFCB00B70529 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				91420111296F7F62001D0F61 /* PBXTargetDependency */,
+				9191D9D42971BFCB00B70529 /* PBXTargetDependency */,
 			);
-			name = BuggyUITests;
-			productName = BuggyUITests;
-			productReference = 9142010F296F7F62001D0F61 /* BuggyUITests.xctest */;
+			name = LootLoggerUITests;
+			productName = LootLoggerUITests;
+			productReference = 9191D9D22971BFCB00B70529 /* LootLoggerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		914200E7296F7F61001D0F61 /* Project object */ = {
+		9191D9AA2971BFCA00B70529 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					914200EE296F7F61001D0F61 = {
+					9191D9B12971BFCA00B70529 = {
 						CreatedOnToolsVersion = 13.0;
 					};
-					91420104296F7F62001D0F61 = {
+					9191D9C72971BFCB00B70529 = {
 						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 914200EE296F7F61001D0F61;
+						TestTargetID = 9191D9B12971BFCA00B70529;
 					};
-					9142010E296F7F62001D0F61 = {
+					9191D9D12971BFCB00B70529 = {
 						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 914200EE296F7F61001D0F61;
+						TestTargetID = 9191D9B12971BFCA00B70529;
 					};
 				};
 			};
-			buildConfigurationList = 914200EA296F7F61001D0F61 /* Build configuration list for PBXProject "Buggy" */;
+			buildConfigurationList = 9191D9AD2971BFCA00B70529 /* Build configuration list for PBXProject "LootLogger" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -214,37 +214,37 @@
 				en,
 				Base,
 			);
-			mainGroup = 914200E6296F7F61001D0F61;
-			productRefGroup = 914200F0296F7F61001D0F61 /* Products */;
+			mainGroup = 9191D9A92971BFCA00B70529;
+			productRefGroup = 9191D9B32971BFCA00B70529 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				914200EE296F7F61001D0F61 /* Buggy */,
-				91420104296F7F62001D0F61 /* BuggyTests */,
-				9142010E296F7F62001D0F61 /* BuggyUITests */,
+				9191D9B12971BFCA00B70529 /* LootLogger */,
+				9191D9C72971BFCB00B70529 /* LootLoggerTests */,
+				9191D9D12971BFCB00B70529 /* LootLoggerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		914200ED296F7F61001D0F61 /* Resources */ = {
+		9191D9B02971BFCA00B70529 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914200FF296F7F61001D0F61 /* LaunchScreen.storyboard in Resources */,
-				914200FC296F7F61001D0F61 /* Assets.xcassets in Resources */,
-				914200FA296F7F61001D0F61 /* Main.storyboard in Resources */,
+				9191D9C22971BFCB00B70529 /* LaunchScreen.storyboard in Resources */,
+				9191D9BF2971BFCB00B70529 /* Assets.xcassets in Resources */,
+				9191D9BD2971BFCA00B70529 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91420103296F7F62001D0F61 /* Resources */ = {
+		9191D9C62971BFCB00B70529 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9142010D296F7F62001D0F61 /* Resources */ = {
+		9191D9D02971BFCB00B70529 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,61 +254,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		914200EB296F7F61001D0F61 /* Sources */ = {
+		9191D9AE2971BFCA00B70529 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914200F7296F7F61001D0F61 /* ViewController.swift in Sources */,
-				914200F3296F7F61001D0F61 /* AppDelegate.swift in Sources */,
-				914200F5296F7F61001D0F61 /* SceneDelegate.swift in Sources */,
+				9191D9E62971C16800B70529 /* ItemsViewController.swift in Sources */,
+				9191D9B62971BFCA00B70529 /* AppDelegate.swift in Sources */,
+				9191D9B82971BFCA00B70529 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91420101296F7F62001D0F61 /* Sources */ = {
+		9191D9C42971BFCB00B70529 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9142010A296F7F62001D0F61 /* BuggyTests.swift in Sources */,
+				9191D9CD2971BFCB00B70529 /* LootLoggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9142010B296F7F62001D0F61 /* Sources */ = {
+		9191D9CE2971BFCB00B70529 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91420114296F7F62001D0F61 /* BuggyUITests.swift in Sources */,
-				91420116296F7F62001D0F61 /* BuggyUITestsLaunchTests.swift in Sources */,
+				9191D9D92971BFCB00B70529 /* LootLoggerUITestsLaunchTests.swift in Sources */,
+				9191D9D72971BFCB00B70529 /* LootLoggerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		91420107296F7F62001D0F61 /* PBXTargetDependency */ = {
+		9191D9CA2971BFCB00B70529 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 914200EE296F7F61001D0F61 /* Buggy */;
-			targetProxy = 91420106296F7F62001D0F61 /* PBXContainerItemProxy */;
+			target = 9191D9B12971BFCA00B70529 /* LootLogger */;
+			targetProxy = 9191D9C92971BFCB00B70529 /* PBXContainerItemProxy */;
 		};
-		91420111296F7F62001D0F61 /* PBXTargetDependency */ = {
+		9191D9D42971BFCB00B70529 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 914200EE296F7F61001D0F61 /* Buggy */;
-			targetProxy = 91420110296F7F62001D0F61 /* PBXContainerItemProxy */;
+			target = 9191D9B12971BFCA00B70529 /* LootLogger */;
+			targetProxy = 9191D9D32971BFCB00B70529 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		914200F8296F7F61001D0F61 /* Main.storyboard */ = {
+		9191D9BB2971BFCA00B70529 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				914200F9296F7F61001D0F61 /* Base */,
+				9191D9BC2971BFCA00B70529 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		914200FD296F7F61001D0F61 /* LaunchScreen.storyboard */ = {
+		9191D9C02971BFCB00B70529 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				914200FE296F7F61001D0F61 /* Base */,
+				9191D9C12971BFCB00B70529 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -316,7 +316,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		91420117296F7F62001D0F61 /* Debug */ = {
+		9191D9DA2971BFCB00B70529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -377,7 +377,7 @@
 			};
 			name = Debug;
 		};
-		91420118296F7F62001D0F61 /* Release */ = {
+		9191D9DB2971BFCB00B70529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -432,7 +432,7 @@
 			};
 			name = Release;
 		};
-		9142011A296F7F62001D0F61 /* Debug */ = {
+		9191D9DD2971BFCB00B70529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -441,7 +441,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M83TUL5J88;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Buggy/Info.plist;
+				INFOPLIST_FILE = LootLogger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -452,7 +452,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.Buggy;
+				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.LootLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -460,7 +460,7 @@
 			};
 			name = Debug;
 		};
-		9142011B296F7F62001D0F61 /* Release */ = {
+		9191D9DE2971BFCB00B70529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -469,7 +469,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M83TUL5J88;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Buggy/Info.plist;
+				INFOPLIST_FILE = LootLogger/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -480,7 +480,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.Buggy;
+				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.LootLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -488,7 +488,7 @@
 			};
 			name = Release;
 		};
-		9142011D296F7F62001D0F61 /* Debug */ = {
+		9191D9E02971BFCB00B70529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -503,16 +503,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.BuggyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.LootLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buggy.app/Buggy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LootLogger.app/LootLogger";
 			};
 			name = Debug;
 		};
-		9142011E296F7F62001D0F61 /* Release */ = {
+		9191D9E12971BFCB00B70529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -527,16 +527,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.BuggyTests;
+				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.LootLoggerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Buggy.app/Buggy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LootLogger.app/LootLogger";
 			};
 			name = Release;
 		};
-		91420120296F7F62001D0F61 /* Debug */ = {
+		9191D9E32971BFCB00B70529 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -549,16 +549,16 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.BuggyUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.LootLoggerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Buggy;
+				TEST_TARGET_NAME = LootLogger;
 			};
 			name = Debug;
 		};
-		91420121296F7F62001D0F61 /* Release */ = {
+		9191D9E42971BFCB00B70529 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -571,55 +571,55 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.BuggyUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = firdavsii.majidzoda.LootLoggerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Buggy;
+				TEST_TARGET_NAME = LootLogger;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		914200EA296F7F61001D0F61 /* Build configuration list for PBXProject "Buggy" */ = {
+		9191D9AD2971BFCA00B70529 /* Build configuration list for PBXProject "LootLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91420117296F7F62001D0F61 /* Debug */,
-				91420118296F7F62001D0F61 /* Release */,
+				9191D9DA2971BFCB00B70529 /* Debug */,
+				9191D9DB2971BFCB00B70529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91420119296F7F62001D0F61 /* Build configuration list for PBXNativeTarget "Buggy" */ = {
+		9191D9DC2971BFCB00B70529 /* Build configuration list for PBXNativeTarget "LootLogger" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9142011A296F7F62001D0F61 /* Debug */,
-				9142011B296F7F62001D0F61 /* Release */,
+				9191D9DD2971BFCB00B70529 /* Debug */,
+				9191D9DE2971BFCB00B70529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9142011C296F7F62001D0F61 /* Build configuration list for PBXNativeTarget "BuggyTests" */ = {
+		9191D9DF2971BFCB00B70529 /* Build configuration list for PBXNativeTarget "LootLoggerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9142011D296F7F62001D0F61 /* Debug */,
-				9142011E296F7F62001D0F61 /* Release */,
+				9191D9E02971BFCB00B70529 /* Debug */,
+				9191D9E12971BFCB00B70529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9142011F296F7F62001D0F61 /* Build configuration list for PBXNativeTarget "BuggyUITests" */ = {
+		9191D9E22971BFCB00B70529 /* Build configuration list for PBXNativeTarget "LootLoggerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91420120296F7F62001D0F61 /* Debug */,
-				91420121296F7F62001D0F61 /* Release */,
+				9191D9E32971BFCB00B70529 /* Debug */,
+				9191D9E42971BFCB00B70529 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 914200E7296F7F61001D0F61 /* Project object */;
+	rootObject = 9191D9AA2971BFCA00B70529 /* Project object */;
 }

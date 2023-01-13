@@ -1,13 +1,13 @@
 //
-//  BuggyUITestsLaunchTests.swift
-//  BuggyUITests
+//  LootLoggerUITestsLaunchTests.swift
+//  LootLoggerUITests
 //
-//  Created by Firdavsii Majidzoda on 1/11/23.
+//  Created by Firdavsii Majidzoda on 1/13/23.
 //
 
 import XCTest
 
-class BuggyUITestsLaunchTests: XCTestCase {
+class LootLoggerUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
