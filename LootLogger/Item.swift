@@ -1,6 +1,6 @@
 import UIKit
 
-class Item {
+class Item: Equatable {
     var name: String
     var valuesInDoller: Int
     var serialNumber: String?
@@ -29,5 +29,12 @@ class Item {
         } else {
             self.init(name: "", serialNumber: nil, valueInDollars: 0)
         }
+    }
+    
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        return lhs.name == rhs.name
+        && lhs.valuesInDoller == rhs.valuesInDoller
+        && lhs.serialNumber == rhs.serialNumber
+        && lhs.dateCreated == rhs.dateCreated
     }
 }
