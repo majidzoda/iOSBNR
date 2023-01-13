@@ -9,7 +9,10 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create an instance of UITableVieCell with default appereance
-        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+//        let cell = UITableViewCell(style: .value1, reuseIdentifier: "UITableViewCell")
+        
+        // Create a new or recycled cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
         // Set the text on the cell with the description of the item
         // that is at the nth index of item, where n = row this cell
