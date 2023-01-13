@@ -4,13 +4,6 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     
     @IBAction func addNewItem(_ sender: UIButton) {
-        // Make a new index path for the 0th section, last row
-//        let lastRow = tableView.numberOfRows(inSection: 0)
-//        let indexPath = IndexPath(row: lastRow, section: 0)
-//
-//        // Insert this new row into the table
-//        tableView.insertRows(at: [indexPath], with: .automatic)
-        
         // Create a new Item and add it to the store
         let newItem = itemStore.createItem()
         
@@ -57,5 +50,18 @@ class ItemsViewController: UITableViewController {
         cell.detailTextLabel?.text = "$\(item.valuesInDoller)"
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // if the table view is asking to commit a delete command...
+        if editingStyle == .delete {
+            let item = itemStore.allItems[indexPath.row]
+            
+            // Remove the item for the store
+            itemStore.removeItem(item)
+            
+            // Also remove that row from the table view with an animation
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
 }
