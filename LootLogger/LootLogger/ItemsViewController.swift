@@ -4,23 +4,18 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     
     @IBAction func addNewItem(_ sender: UIButton) {
-        // Create a new Item and add it to the store
-        let newItem = itemStore.createItem()
-        
-        // Figure out where that item is in the array
-        if itemStore.isLessThan50(newItem) {
-            if let index = itemStore.allItems.lower50.firstIndex(of: newItem) {
-                let indexPath = IndexPath(row: index, section: 0)
-                tableView.insertRows(at: [indexPath], with: .automatic)
-            }
-        } else {
-            if let index = itemStore.allItems.above50.firstIndex(of: newItem) {
-                let indexPath = IndexPath(row: index, section: 1)
-                tableView.insertRows(at: [indexPath], with: .automatic)
-            }
-        }
-        
-    }
+           // Create a new item and add it to the store
+           let newItem = itemStore.createItem()
+           
+           // Figure out where the item is in the array
+        let section = newItem.valuesInDollar <= 50 ? 0 : 1
+           if let index = itemStore.allItems[section].firstIndex(of: newItem){
+               let indexPath = IndexPath(row: index, section: section)
+               
+               // Insert this new row into the table
+               tableView.insertRows(at: [indexPath], with: .automatic)
+           }
+       }
     
     @IBAction func toggleEditingMode(_ sender: UIButton){
         // If you are currently in editing mode
@@ -40,11 +35,7 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return itemStore.allItems.lower50.count
-        } else {
-            return itemStore.allItems.above50.count
-        }
+        return itemStore.allItems[section].count
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -68,23 +59,31 @@ class ItemsViewController: UITableViewController {
         // Set the text on the cell with the description of the item
         // that is at the nth index of item, where n = row this cell
         // will appear in on the table view
-        let item = indexPath.section == 0 ? itemStore.allItems.lower50[indexPath.row] : itemStore.allItems.above50[indexPath.row]
+        let item = itemStore.allItems[indexPath.section][indexPath.row]
         
-        cell.textLabel?.text = item.name
-        cell.detailTextLabel?.text = "$\(item.valuesInDoller)"
         
+        if itemStore.allItems[indexPath.section].count == 1,
+            item.name == "",
+           item.valuesInDollar == 0,
+           item.serialNumber == nil {
+            cell.textLabel?.text = "No items!"
+            cell.detailTextLabel?.text = ""
+        } else {
+            cell.textLabel?.text = item.name
+            cell.detailTextLabel?.text = "$\(item.valuesInDollar)"
+        }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         // if the table view is asking to commit a delete command...
         if editingStyle == .delete {
-            let item = indexPath.section == 0 ? itemStore.allItems.lower50[indexPath.row] : itemStore.allItems.above50[indexPath.row]
+            let item = itemStore.allItems[indexPath.section][indexPath.row]
             
-            // Remove the item for the store
+            // Remove the item from the store
             itemStore.removeItem(item)
             
-            // Also remove that row from the table view with an animation
+            // Also remove that roe from the table view with an animation
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }

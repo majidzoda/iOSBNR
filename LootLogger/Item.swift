@@ -2,13 +2,13 @@ import UIKit
 
 class Item: Equatable {
     var name: String
-    var valuesInDoller: Int
+    var valuesInDollar: Int
     var serialNumber: String?
     let dateCreated: Date
     
     init(name: String, serialNumber: String?, valueInDollars: Int) {
         self.name = name
-        self.valuesInDoller = valueInDollars
+        self.valuesInDollar = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = Date()
     }
@@ -33,7 +33,7 @@ class Item: Equatable {
     
     static func == (lhs: Item, rhs: Item) -> Bool {
         return lhs.name == rhs.name
-        && lhs.valuesInDoller == rhs.valuesInDoller
+        && lhs.valuesInDollar == rhs.valuesInDollar
         && lhs.serialNumber == rhs.serialNumber
         && lhs.dateCreated == rhs.dateCreated
     }
