@@ -82,7 +82,7 @@ class ItemsViewController: UITableViewController {
             cell.isUserInteractionEnabled = false
         
         } else {
-            cell.textLabel?.text = item.name
+            cell.textLabel?.text = item.isFavorite ? "\(item.name) ⭐" : item.name
             cell.detailTextLabel?.text = "$\(item.valuesInDollar)"
             cell.isUserInteractionEnabled = true
         }
@@ -104,8 +104,6 @@ class ItemsViewController: UITableViewController {
                 // Also remove that roe from the table view with an animation
                 
                 tableView.deleteRows(at: [indexPath], with: .automatic)
-                
-                
             }
             
             if itemStore.allItems[indexPath.section].count == 0 {
@@ -113,6 +111,22 @@ class ItemsViewController: UITableViewController {
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let contextualAction = UIContextualAction(style: .normal, title: "⭐") { action, view, completion in
+            let item = self.itemStore.allItems[indexPath.section][indexPath.row]
+            switch item.isFavorite {
+            case true:
+                item.isFavorite = false
+                item.name = item.name.trimmingCharacters(in: ["⭐"])
+            case false:
+                item.isFavorite = true
+            }
+            self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        
+        }
+        return UISwipeActionsConfiguration(actions: [contextualAction])
     }
     
     override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {

@@ -5,6 +5,7 @@ class Item: Equatable {
     var valuesInDollar: Int
     var serialNumber: String?
     let dateCreated: Date
+    var isFavorite = false
     
     init(name: String, serialNumber: String?, valueInDollars: Int) {
         self.name = name
