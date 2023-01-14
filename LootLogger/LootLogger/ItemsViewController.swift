@@ -4,11 +4,21 @@ class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
     
     @IBAction func addNewItem(_ sender: UIButton) {
-           // Create a new item and add it to the store
-           let newItem = itemStore.createItem()
+        // Create a new item and add it to the store
+        let newItem = Item(random: true)
            
-           // Figure out where the item is in the array
+        // Figure out where the item is in the array
         let section = newItem.valuesInDollar <= 50 ? 0 : 1
+        
+        if itemStore.allItems[section].count == 1,
+           itemStore.allItems[section][0].name == "No items!",
+           itemStore.allItems[section][0].serialNumber == nil,
+           itemStore.allItems[section][0].valuesInDollar == 0 {
+            itemStore.allItems[section].remove(at: 0)
+            
+            tableView.deleteRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
+        }
+        itemStore.allItems[section].append(newItem)
            if let index = itemStore.allItems[section].firstIndex(of: newItem){
                let indexPath = IndexPath(row: index, section: section)
                
@@ -66,11 +76,15 @@ class ItemsViewController: UITableViewController {
             item.name == "",
            item.valuesInDollar == 0,
            item.serialNumber == nil {
+            item.name = "No items!"
             cell.textLabel?.text = "No items!"
             cell.detailTextLabel?.text = ""
+            cell.isUserInteractionEnabled = false
+        
         } else {
             cell.textLabel?.text = item.name
             cell.detailTextLabel?.text = "$\(item.valuesInDollar)"
+            cell.isUserInteractionEnabled = true
         }
         return cell
     }
@@ -80,11 +94,24 @@ class ItemsViewController: UITableViewController {
         if editingStyle == .delete {
             let item = itemStore.allItems[indexPath.section][indexPath.row]
             
-            // Remove the item from the store
-            itemStore.removeItem(item)
+            if item.name != "",
+               item.valuesInDollar > 0,
+               item.serialNumber != nil {
+                
+                // Remove the item from the store
+                itemStore.allItems[indexPath.section].remove(at: indexPath.row)
+                
+                // Also remove that roe from the table view with an animation
+                
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                
+                
+            }
             
-            // Also remove that roe from the table view with an animation
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            if itemStore.allItems[indexPath.section].count == 0 {
+                itemStore.allItems[indexPath.section].append(Item(random: false))
+                tableView.insertRows(at: [indexPath], with: .automatic)
+            }
         }
     }
     

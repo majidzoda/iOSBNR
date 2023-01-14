@@ -3,6 +3,10 @@ import UIKit
 class ItemStore {
     var allItems = [[Item](), [Item]()]
     
+    init(){
+        allItems[0].append(Item(random: false))
+        allItems[1].append(Item(random: false))
+    }
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
         newItem.valuesInDollar <= 50 ? allItems[0].append(newItem) : allItems[1].append(newItem)
