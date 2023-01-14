@@ -89,6 +89,17 @@ class ItemsViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath: IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        if sourceIndexPath.section == proposedDestinationIndexPath.section {
+            if sourceIndexPath.row == proposedDestinationIndexPath.row {
+                return sourceIndexPath
+            }
+            return proposedDestinationIndexPath
+        } else {
+            return sourceIndexPath
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         if destinationIndexPath.section != sourceIndexPath.section {
             // Update the model

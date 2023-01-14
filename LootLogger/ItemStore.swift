@@ -30,10 +30,6 @@ class ItemStore {
     }
     
     func moveItem(from sourceIndexPath: IndexPath, to destinationiIdexPath: IndexPath) {
-        if sourceIndexPath.row == destinationiIdexPath.row {
-            return
-        }
-        
         // Get reference to object being moved so you can reinsert it
         
         if sourceIndexPath.section == 0 {
@@ -51,8 +47,6 @@ class ItemStore {
             // Insert item in array at new location
             allItems.above50.insert(movedItem, at: destinationiIdexPath.row)
         }
-        
-
     }
     
     func isLessThan50(_ item: Item) -> Bool {
