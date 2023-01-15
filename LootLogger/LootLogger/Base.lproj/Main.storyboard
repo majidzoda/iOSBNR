@@ -20,15 +20,27 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWj-QT-Lw5">
-                                    <rect key="frame" x="8" y="14.5" width="195" height="31"/>
+                                    <rect key="frame" x="8" y="14.5" width="49" height="31"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Edit"/>
                                     <connections>
                                         <action selector="toggleEditingMode:" destination="Snq-J0-Ji6" eventType="touchUpInside" id="ayD-61-zEk"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⭐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUQ-dq-Z0d">
+                                    <rect key="frame" x="176" y="19.5" width="23" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-7f-va0">
+                                    <rect key="frame" x="215" y="14.5" width="51" height="31"/>
+                                    <connections>
+                                        <action selector="toggleFavoriteSwitch:" destination="Snq-J0-Ji6" eventType="valueChanged" id="R3e-oc-Kjg"/>
+                                    </connections>
+                                </switch>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBP-Ud-1oI">
-                                    <rect key="frame" x="211" y="14.5" width="195" height="31"/>
+                                    <rect key="frame" x="356" y="14.5" width="50" height="31"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Add"/>
                                     <connections>
@@ -38,12 +50,14 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="OWj-QT-Lw5" firstAttribute="leading" secondItem="w8f-tg-pGC" secondAttribute="leading" constant="8" id="4uN-cu-bEm"/>
-                                <constraint firstItem="HBP-Ud-1oI" firstAttribute="centerY" secondItem="w8f-tg-pGC" secondAttribute="centerY" id="AWA-4Y-v1r"/>
-                                <constraint firstItem="HBP-Ud-1oI" firstAttribute="leading" secondItem="OWj-QT-Lw5" secondAttribute="trailing" constant="8" id="KT6-73-f0S"/>
-                                <constraint firstAttribute="trailing" secondItem="HBP-Ud-1oI" secondAttribute="trailing" constant="8" id="S4T-uW-rqC"/>
-                                <constraint firstItem="OWj-QT-Lw5" firstAttribute="centerY" secondItem="w8f-tg-pGC" secondAttribute="centerY" id="pgH-8B-U2P"/>
-                                <constraint firstItem="HBP-Ud-1oI" firstAttribute="width" secondItem="OWj-QT-Lw5" secondAttribute="width" id="wh2-LE-mch"/>
+                                <constraint firstItem="HSf-7f-va0" firstAttribute="centerY" secondItem="w8f-tg-pGC" secondAttribute="centerY" id="F2J-Yz-33t"/>
+                                <constraint firstItem="HSf-7f-va0" firstAttribute="leading" secondItem="w8f-tg-pGC" secondAttribute="centerX" constant="8" id="GcY-AA-oSf"/>
+                                <constraint firstAttribute="trailing" secondItem="HBP-Ud-1oI" secondAttribute="trailing" constant="8" id="H4I-RC-pLA"/>
+                                <constraint firstAttribute="centerX" secondItem="wUQ-dq-Z0d" secondAttribute="trailing" constant="8" id="WAO-IV-ROn"/>
+                                <constraint firstItem="wUQ-dq-Z0d" firstAttribute="centerY" secondItem="w8f-tg-pGC" secondAttribute="centerY" id="XfF-94-U0G"/>
+                                <constraint firstItem="HBP-Ud-1oI" firstAttribute="centerY" secondItem="w8f-tg-pGC" secondAttribute="centerY" id="YEm-jN-bgz"/>
+                                <constraint firstItem="OWj-QT-Lw5" firstAttribute="centerY" secondItem="w8f-tg-pGC" secondAttribute="centerY" id="aqT-0o-vJR"/>
+                                <constraint firstItem="OWj-QT-Lw5" firstAttribute="leading" secondItem="w8f-tg-pGC" secondAttribute="leading" constant="8" id="bgu-Gx-5Ji"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -77,6 +91,9 @@
                             <outlet property="delegate" destination="Snq-J0-Ji6" id="Kbb-BZ-LFr"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="favoriteSwitch" destination="HSf-7f-va0" id="9ur-O3-PCe"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Brq-wz-zQx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

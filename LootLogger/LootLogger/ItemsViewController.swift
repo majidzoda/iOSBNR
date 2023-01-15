@@ -2,6 +2,7 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
+    @IBOutlet favoriteSwitch: UISwitch!
     
     @IBAction func addNewItem(_ sender: UIButton) {
         // Create a new item and add it to the store
@@ -42,6 +43,10 @@ class ItemsViewController: UITableViewController {
             // Enter editing mode
             setEditing(true, animated: true)
         }
+    }
+    
+    @IBAction func toggleFavoriteSwitch(_ sender: UISwitch){
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
