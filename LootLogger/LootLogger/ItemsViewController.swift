@@ -2,7 +2,7 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
-    @IBOutlet favoriteSwitch: UISwitch!
+    @IBOutlet var favoriteSwitch: UISwitch!
     
     @IBAction func addNewItem(_ sender: UIButton) {
         // Create a new item and add it to the store
@@ -119,8 +119,14 @@ class ItemsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let item = self.itemStore.allItems[indexPath.section][indexPath.row]
+        if item.name == "No items!",
+            item.serialNumber == nil,
+           item.valuesInDollar == 0 {
+            return nil
+        }
         let contextualAction = UIContextualAction(style: .normal, title: "⭐") { action, view, completion in
-            let item = self.itemStore.allItems[indexPath.section][indexPath.row]
+            
             switch item.isFavorite {
             case true:
                 item.isFavorite = false
