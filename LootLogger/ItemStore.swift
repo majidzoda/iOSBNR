@@ -2,6 +2,8 @@ import UIKit
 
 class ItemStore {
     var allItems = [[Item](), [Item]()]
+    var below50HasFavorite = false
+    var above50HasFavorite = false
     
     init(){
         allItems[0].append(Item(random: false))

@@ -7,25 +7,13 @@ class ItemsViewController: UITableViewController {
     @IBAction func addNewItem(_ sender: UIButton) {
         // Create a new item and add it to the store
         let newItem = Item(random: true)
+        newItem.isFavorite = favoriteSwitch.isOn ? true : false
            
         // Figure out where the item is in the array
         let section = newItem.valuesInDollar <= 50 ? 0 : 1
-        
-        if itemStore.allItems[section].count == 1,
-           itemStore.allItems[section][0].name == "No items!",
-           itemStore.allItems[section][0].serialNumber == nil,
-           itemStore.allItems[section][0].valuesInDollar == 0 {
-            itemStore.allItems[section].remove(at: 0)
-            
-            tableView.deleteRows(at: [IndexPath(row: 0, section: section)], with: .automatic)
-        }
         itemStore.allItems[section].append(newItem)
-           if let index = itemStore.allItems[section].firstIndex(of: newItem){
-               let indexPath = IndexPath(row: index, section: section)
-               
-               // Insert this new row into the table
-               tableView.insertRows(at: [indexPath], with: .automatic)
-           }
+        evaluateFavs()
+        tableView.reloadData()
        }
     
     @IBAction func toggleEditingMode(_ sender: UIButton){
@@ -46,7 +34,38 @@ class ItemsViewController: UITableViewController {
     }
     
     @IBAction func toggleFavoriteSwitch(_ sender: UISwitch){
-        
+        if sender.isOn {
+            evaluateFavs()
+        }
+        tableView.reloadData()
+    }
+    
+    func evaluateFavs(){
+        itemStore.below50HasFavorite = itemStore.allItems[0].contains(where: {
+        (item: Item) in
+            if item.isFavorite {
+                switch item.name{
+                case "", "No items!", "No favorite items!":
+                    return false
+                default:
+                    return true
+                }
+            }
+            return false
+            
+        })
+        itemStore.above50HasFavorite = itemStore.allItems[1].contains(where: {
+            (item: Item) in
+                if item.isFavorite {
+                    switch item.name{
+                    case "", "No items!", "No favorite items!":
+                        return false
+                    default:
+                        return true
+                    }
+                }
+                return false
+            })
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -64,9 +83,7 @@ class ItemsViewController: UITableViewController {
             return ">=$50"
         }
     }
-    
-    
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Create a new or recycled cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
@@ -77,12 +94,11 @@ class ItemsViewController: UITableViewController {
         let item = itemStore.allItems[indexPath.section][indexPath.row]
         
         
-        if itemStore.allItems[indexPath.section].count == 1,
-            item.name == "",
+        if item.name == "" || item.name == "No items!" || item.name == "No favorite items!",
            item.valuesInDollar == 0,
            item.serialNumber == nil {
-            item.name = "No items!"
-            cell.textLabel?.text = "No items!"
+            item.name = favoriteSwitch.isOn ? "No favorite items!" : "No items!"
+            cell.textLabel?.text = item.name
             cell.detailTextLabel?.text = ""
             cell.isUserInteractionEnabled = false
         
@@ -99,22 +115,14 @@ class ItemsViewController: UITableViewController {
         if editingStyle == .delete {
             let item = itemStore.allItems[indexPath.section][indexPath.row]
             
-            if item.name != "",
+            if item.name != "" || item.name != "No items!" || item.name != "No favorite items!",
                item.valuesInDollar > 0,
                item.serialNumber != nil {
                 
                 // Remove the item from the store
                 itemStore.allItems[indexPath.section].remove(at: indexPath.row)
-                
-                // Also remove that roe from the table view with an animation
-                
-                tableView.deleteRows(at: [indexPath], with: .automatic)
             }
-            
-            if itemStore.allItems[indexPath.section].count == 0 {
-                itemStore.allItems[indexPath.section].append(Item(random: false))
-                tableView.insertRows(at: [indexPath], with: .automatic)
-            }
+            tableView.reloadData()
         }
     }
     
@@ -155,6 +163,40 @@ class ItemsViewController: UITableViewController {
         if destinationIndexPath.section != sourceIndexPath.section {
             // Update the model
             itemStore.moveItem(from: sourceIndexPath, to: destinationIndexPath)
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let item = itemStore.allItems[indexPath.section][indexPath.row]
+        if itemStore.allItems[indexPath.section].count > 1{
+            if favoriteSwitch.isOn {
+                if item.name == "" || item.name == "No items!" || item.name == "No favorite items!",
+                   item.valuesInDollar == 0,
+                   item.serialNumber == nil {
+                    if (indexPath.section == 0 ? itemStore.below50HasFavorite : itemStore.above50HasFavorite) {
+                        return 0
+                    } else {
+                        return tableView.rowHeight
+                    }
+                } else {
+                    if item.isFavorite {
+                        return tableView.rowHeight
+                    } else {
+                        return 0
+                    }
+                }
+            } else {
+                // > 1 not favorite
+                if item.name == "" || item.name == "No items!" || item.name == "No favorite items!",
+                   item.valuesInDollar == 0,
+                   item.serialNumber == nil {
+                    return 0
+                } else {
+                    return tableView.rowHeight
+                }
+            }
+        } else {
+            return tableView.rowHeight
         }
     }
 }
