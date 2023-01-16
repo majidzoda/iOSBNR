@@ -82,6 +82,11 @@
                                         <constraint firstItem="C0o-DD-D5y" firstAttribute="leading" secondItem="yo7-Bk-59h" secondAttribute="leadingMargin" id="wNb-wS-lIT"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="C0o-DD-D5y" id="LXO-b4-LrU"/>
+                                    <outlet property="serialNumberLabel" destination="nSJ-mY-cbL" id="VbS-so-L2q"/>
+                                    <outlet property="valueLabel" destination="pqU-Z8-yen" id="9Y7-gR-Zsf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
