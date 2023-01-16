@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914AA4DC2975CDB600A525F7 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914AA4DB2975CDB600A525F7 /* ItemCell.swift */; };
 		9191D9B62971BFCA00B70529 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9B52971BFCA00B70529 /* AppDelegate.swift */; };
 		9191D9B82971BFCA00B70529 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9B72971BFCA00B70529 /* SceneDelegate.swift */; };
 		9191D9BD2971BFCA00B70529 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9191D9BB2971BFCA00B70529 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		914AA4DB2975CDB600A525F7 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		9191D9B22971BFCA00B70529 /* LootLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LootLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9191D9B52971BFCA00B70529 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9191D9B72971BFCA00B70529 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,8 +85,6 @@
 		9191D9A92971BFCA00B70529 = {
 			isa = PBXGroup;
 			children = (
-				9191D9E72971C32E00B70529 /* Item.swift */,
-				9191D9E92971C7E300B70529 /* ItemStore.swift */,
 				9191D9B42971BFCA00B70529 /* LootLogger */,
 				9191D9CB2971BFCB00B70529 /* LootLoggerTests */,
 				9191D9D52971BFCB00B70529 /* LootLoggerUITests */,
@@ -105,6 +105,8 @@
 		9191D9B42971BFCA00B70529 /* LootLogger */ = {
 			isa = PBXGroup;
 			children = (
+				9191D9E72971C32E00B70529 /* Item.swift */,
+				9191D9E92971C7E300B70529 /* ItemStore.swift */,
 				9191D9B52971BFCA00B70529 /* AppDelegate.swift */,
 				9191D9B72971BFCA00B70529 /* SceneDelegate.swift */,
 				9191D9BB2971BFCA00B70529 /* Main.storyboard */,
@@ -112,6 +114,7 @@
 				9191D9C02971BFCB00B70529 /* LaunchScreen.storyboard */,
 				9191D9C32971BFCB00B70529 /* Info.plist */,
 				9191D9E52971C16800B70529 /* ItemsViewController.swift */,
+				914AA4DB2975CDB600A525F7 /* ItemCell.swift */,
 			);
 			path = LootLogger;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				9191D9E82971C32E00B70529 /* Item.swift in Sources */,
 				9191D9E62971C16800B70529 /* ItemsViewController.swift in Sources */,
+				914AA4DC2975CDB600A525F7 /* ItemCell.swift in Sources */,
 				9191D9B62971BFCA00B70529 /* AppDelegate.swift in Sources */,
 				9191D9EA2971C7E300B70529 /* ItemStore.swift in Sources */,
 				9191D9B82971BFCA00B70529 /* SceneDelegate.swift in Sources */,
