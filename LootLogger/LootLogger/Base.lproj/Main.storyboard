@@ -88,6 +88,7 @@
                                     <outlet property="nameLabel" destination="C0o-DD-D5y" id="LXO-b4-LrU"/>
                                     <outlet property="serialNumberLabel" destination="nSJ-mY-cbL" id="VbS-so-L2q"/>
                                     <outlet property="valueLabel" destination="pqU-Z8-yen" id="9Y7-gR-Zsf"/>
+                                    <segue destination="CtA-6f-cdd" kind="show" id="Z5w-sj-w5P"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -106,11 +107,11 @@
             <objects>
                 <viewController id="CtA-6f-cdd" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jo6-qi-FTb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MWX-MI-H12">
-                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                                <rect key="frame" x="8" y="8" width="398" height="792"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aby-yr-cAt">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -161,7 +162,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-vh-sZ2">
-                                        <rect key="frame" x="0.0" y="126" width="398" height="676"/>
+                                        <rect key="frame" x="0.0" y="126" width="398" height="666"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -182,6 +183,7 @@
                             <constraint firstItem="9nJ-8s-C0l" firstAttribute="trailing" secondItem="MWX-MI-H12" secondAttribute="trailing" constant="8" id="oBI-Ax-sfL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="nJY-NU-Uc3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQu-yk-4P9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
