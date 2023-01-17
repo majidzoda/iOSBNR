@@ -19,6 +19,7 @@
 		9191D9E62971C16800B70529 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9E52971C16800B70529 /* ItemsViewController.swift */; };
 		9191D9E82971C32E00B70529 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9E72971C32E00B70529 /* Item.swift */; };
 		9191D9EA2971C7E300B70529 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9191D9E92971C7E300B70529 /* ItemStore.swift */; };
+		91DCD42D2977041B00835F5C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCD42C2977041B00835F5C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9191D9E52971C16800B70529 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		9191D9E72971C32E00B70529 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		9191D9E92971C7E300B70529 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		91DCD42C2977041B00835F5C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				9191D9C32971BFCB00B70529 /* Info.plist */,
 				9191D9E52971C16800B70529 /* ItemsViewController.swift */,
 				914AA4DB2975CDB600A525F7 /* ItemCell.swift */,
+				91DCD42C2977041B00835F5C /* DetailViewController.swift */,
 			);
 			path = LootLogger;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				9191D9B62971BFCA00B70529 /* AppDelegate.swift in Sources */,
 				9191D9EA2971C7E300B70529 /* ItemStore.swift in Sources */,
 				9191D9B82971BFCA00B70529 /* SceneDelegate.swift in Sources */,
+				91DCD42D2977041B00835F5C /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
