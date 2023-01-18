@@ -5,8 +5,9 @@ class ItemsViewController: UITableViewController {
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
-
+        
         navigationItem.leftBarButtonItem = editButtonItem
+        
     }
     
     override func viewDidLoad(){
