@@ -5,9 +5,7 @@ class ItemsViewController: UITableViewController {
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
-        
         navigationItem.leftBarButtonItem = editButtonItem
-        
     }
     
     override func viewDidLoad(){
@@ -82,6 +80,7 @@ class ItemsViewController: UITableViewController {
                 let detailViewController
                         = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.navigationItem.leftBarButtonItem?.title = ""
             }
         default:
             preconditionFailure("Unexpected segue identifier.")
@@ -90,6 +89,13 @@ class ItemsViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationItem.title = "Loot Logger"
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationItem.title = ["", "Back", "Log"].randomElement()
     }
 }

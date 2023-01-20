@@ -172,13 +172,7 @@
                             <outletCollection property="gestureRecognizers" destination="ghT-kb-UxN" appends="YES" id="Wdl-mf-pbX"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="nJY-NU-Uc3">
-                        <barButtonItem key="leftBarButtonItem" image="chevron.backward.circle" catalog="system" id="GxC-6W-0oF">
-                            <connections>
-                                <action selector="backButtonTapped:" destination="CtA-6f-cdd" id="X40-ox-Q40"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="nJY-NU-Uc3"/>
                     <connections>
                         <outlet property="dateLabel" destination="kWN-vh-sZ2" id="qgN-zN-cWx"/>
                         <outlet property="nameField" destination="xjQ-T6-Bdh" id="T1d-Z5-WPr"/>
@@ -215,7 +209,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.backward.circle" catalog="system" width="128" height="121"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

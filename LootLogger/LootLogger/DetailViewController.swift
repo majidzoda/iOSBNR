@@ -27,11 +27,6 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         return formatter
     }()
     
-    
-    @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-    
     @IBAction func backgroundTapped(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
