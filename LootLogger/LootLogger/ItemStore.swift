@@ -8,6 +8,14 @@ class ItemStore {
         return documentDirectory.appendingPathComponent("items.plist")
     }()
     
+    init() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self,
+                                       selector: #selector(saveChanges),
+                                       name: UIScene.didEnterBackgroundNotification,
+                                       object: nil)
+    }
+    
     
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
@@ -37,7 +45,7 @@ class ItemStore {
         allItems.insert(movedItem, at: toIndex)
     }
     
-    func saveChanges() -> Bool {
+    @objc func saveChanges() -> Bool {
         print("Saving items to: \(itemArchiveURL)")
 
         do {
