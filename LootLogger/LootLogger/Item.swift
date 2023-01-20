@@ -1,6 +1,6 @@
 import UIKit
 
-class Item: Equatable {
+class Item: Equatable, Codable {
     var name: String
     var valuesInDollar: Int
     var serialNumber: String?
