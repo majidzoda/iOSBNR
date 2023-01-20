@@ -38,11 +38,16 @@ class ItemStore {
     }
     
     func saveChanges() -> Bool {
+        print("Saving items to: \(itemArchiveURL)")
+
         do {
             let encoder = PropertyListEncoder()
             let data = try encoder.encode(allItems)
+            try data.write(to: itemArchiveURL, options: [.atomic])
+            print("Saved all of the items")
         } catch let encodingError{
             print("Error encoding allItems \(encodingError)")
+            return false
         }
         
         
