@@ -31,6 +31,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
+    @IBAction func changeDateButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -61,5 +66,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "showDatePicker":
+            let datePickerViewController = segue.destination as! DatePickerViewController
+            datePickerViewController.item = item
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
     }
 }
