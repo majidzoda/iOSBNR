@@ -1,7 +1,8 @@
 import UIKit
 
 class ItemStore {
-    var allItems = [Item]()
+    static var allItems = [Item]()
+    
     let itemArchiveURL: URL = {
         let documentsDirectories = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentDirectory = documentsDirectories.first!
@@ -13,7 +14,7 @@ class ItemStore {
             let data = try Data(contentsOf: itemArchiveURL)
             let unarchiver = PropertyListDecoder()
             let items = try unarchiver.decode([Item].self, from: data)
-            allItems = items
+            ItemStore.allItems = items
         } catch {
             print("Error reading in saced items: \(error)")
         }
@@ -29,13 +30,13 @@ class ItemStore {
     @discardableResult func createItem() -> Item {
         let newItem = Item(random: true)
         
-        allItems.append(newItem)
+        ItemStore.allItems.append(newItem)
         return newItem
     }
     
     func removeItem(_ item: Item) {
-        if let index = allItems.firstIndex(of: item) {
-            allItems.remove(at: index)
+        if let index = ItemStore.allItems.firstIndex(of: item) {
+            ItemStore.allItems.remove(at: index)
         }
     }
     
@@ -45,13 +46,13 @@ class ItemStore {
         }
         
         // Get reference to object being moved so you can reinsert it
-        let movedItem = allItems[fromIndex]
+        let movedItem = ItemStore.allItems[fromIndex]
         
         // Remove item form array
         removeItem(movedItem)
         
         // Insert item in array at new location
-        allItems.insert(movedItem, at: toIndex)
+        ItemStore.allItems.insert(movedItem, at: toIndex)
     }
     
     @objc func saveChanges()throws  {
@@ -59,7 +60,7 @@ class ItemStore {
 
         do {
             let encoder = PropertyListEncoder()
-            let data = try encoder.encode(allItems)
+            let data = try encoder.encode(ItemStore.allItems)
             try data.write(to: itemArchiveURL, options: [.atomic])
             print("Saved all of the items")
         } catch let encodingError{
