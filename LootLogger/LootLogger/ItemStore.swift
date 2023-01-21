@@ -54,7 +54,7 @@ class ItemStore {
         allItems.insert(movedItem, at: toIndex)
     }
     
-    @objc func saveChanges() -> Bool {
+    @objc func saveChanges()throws  {
         print("Saving items to: \(itemArchiveURL)")
 
         do {
@@ -64,10 +64,7 @@ class ItemStore {
             print("Saved all of the items")
         } catch let encodingError{
             print("Error encoding allItems \(encodingError)")
-            return false
+            fatalError()
         }
-        
-        
-        return false
     }
 }
