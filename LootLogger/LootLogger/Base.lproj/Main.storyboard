@@ -169,6 +169,11 @@
                                             <action selector="choosePhotoSource:" destination="CtA-6f-cdd" id="Re9-su-J88"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="trash" id="Egk-Ph-k71">
+                                        <connections>
+                                            <action selector="deletePhoto:" destination="CtA-6f-cdd" id="9Oc-gL-e7w"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

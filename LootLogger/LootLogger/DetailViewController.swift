@@ -61,6 +61,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func deletePhoto(_ sender: UIBarButtonItem){
+        imageView.image = nil
+        imageStore.deleteImage(forKey: item.itemKey)
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
