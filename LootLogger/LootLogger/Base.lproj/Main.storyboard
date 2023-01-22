@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MWX-MI-H12">
-                                <rect key="frame" x="8" y="96" width="398" height="758"/>
+                                <rect key="frame" x="8" y="96" width="398" height="709"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Aby-yr-cAt">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="34"/>
@@ -147,7 +147,7 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWN-vh-sZ2">
-                                        <rect key="frame" x="0.0" y="126" width="398" height="632"/>
+                                        <rect key="frame" x="0.0" y="126" width="398" height="583"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -158,15 +158,28 @@
                                     <constraint firstItem="nH8-LP-gpG" firstAttribute="leading" secondItem="Ehw-sZ-ypl" secondAttribute="leading" id="gkq-Av-AfT"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-wb-SR2">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" systemItem="camera" id="eos-S3-zq5">
+                                        <connections>
+                                            <action selector="choosePhotoSource:" destination="CtA-6f-cdd" id="Re9-su-J88"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9nJ-8s-C0l"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="9nJ-8s-C0l" firstAttribute="bottom" secondItem="MWX-MI-H12" secondAttribute="bottom" constant="8" id="Blb-oA-lwu"/>
                             <constraint firstItem="MWX-MI-H12" firstAttribute="leading" secondItem="9nJ-8s-C0l" secondAttribute="leading" constant="8" id="IbG-9w-fYh"/>
                             <constraint firstItem="MWX-MI-H12" firstAttribute="top" secondItem="9nJ-8s-C0l" secondAttribute="top" constant="8" id="Ka4-Le-dEB"/>
+                            <constraint firstItem="MKl-wb-SR2" firstAttribute="leading" secondItem="Jo6-qi-FTb" secondAttribute="leading" id="P08-FB-XMk"/>
+                            <constraint firstAttribute="trailing" secondItem="MKl-wb-SR2" secondAttribute="trailing" id="ikG-be-q6h"/>
                             <constraint firstItem="9nJ-8s-C0l" firstAttribute="trailing" secondItem="MWX-MI-H12" secondAttribute="trailing" constant="8" id="oBI-Ax-sfL"/>
+                            <constraint firstItem="MKl-wb-SR2" firstAttribute="top" secondItem="MWX-MI-H12" secondAttribute="bottom" constant="8" id="oqv-WQ-Pza"/>
+                            <constraint firstItem="9nJ-8s-C0l" firstAttribute="bottom" secondItem="MKl-wb-SR2" secondAttribute="bottom" id="r9n-c3-lgh"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="ghT-kb-UxN" appends="YES" id="Wdl-mf-pbX"/>
