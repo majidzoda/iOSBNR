@@ -5,7 +5,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var serialNumberField: UITextField!
     @IBOutlet var valueField: UITextField!
     @IBOutlet var dateLabel: UILabel!
-    
+    @IBOutlet var imageView: UIImageView!
     var item: Item! {
         didSet {
             navigationItem.title = item.name
