@@ -66,8 +66,6 @@ class ItemStore {
             print("Error encoding allItems \(encodingError)")
             return false
         }
-        
-        
         return false
     }
 }
