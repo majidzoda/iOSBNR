@@ -41,12 +41,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
             let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
                 print("Present camera")
                 let imagePicker = self.imagePicker(for: .camera)
+                self.present(imagePicker, animated: true, completion: nil)
             }
             alertController.addAction(cameraAction)
         }
     
         let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { _ in
             let imagePicker = self.imagePicker(for: .photoLibrary)
+            imagePicker.modalPresentationStyle = .popover
+            imagePicker.popoverPresentationController?.barButtonItem = sender
+            self.present(imagePicker, animated: true, completion: nil)
         }
         
         alertController.addAction(photoLibraryAction)
