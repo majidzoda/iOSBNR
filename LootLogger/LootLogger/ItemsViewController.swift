@@ -43,8 +43,8 @@ class ItemsViewController: UITableViewController {
         let item = itemStore.allItems[indexPath.row]
         
         cell.nameLabel.text = item.name
-        cell.serialNumberLabel.text = "$\(item.valuesInDollar)"
-        cell.valueLabel.text = "\(item.valuesInDollar)"
+        cell.serialNumberLabel.text = "\(item.serialNumber!)"
+        cell.valueLabel.text = "$\(item.valuesInDollar)"
         
         return cell
     }
