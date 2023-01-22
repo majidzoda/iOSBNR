@@ -2,6 +2,7 @@ import UIKit
 
 class ItemsViewController: UITableViewController {
     var itemStore: ItemStore!
+    var imageStore: ImageStore!
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
@@ -81,6 +82,7 @@ class ItemsViewController: UITableViewController {
                 let detailViewController
                         = segue.destination as! DetailViewController
                 detailViewController.item = item
+                detailViewController.imageStore = imageStore
             }
         default:
             preconditionFailure("Unexpected segue identifier.")
