@@ -1,13 +1,13 @@
 //
-//  LootLoggerUITestsLaunchTests.swift
-//  LootLoggerUITests
+//  MandalaUITestsLaunchTests.swift
+//  MandalaUITests
 //
-//  Created by Firdavsii Majidzoda on 1/13/23.
+//  Created by Firdavsii Majidzoda on 1/24/23.
 //
 
 import XCTest
 
-class LootLoggerUITestsLaunchTests: XCTestCase {
+class MandalaUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

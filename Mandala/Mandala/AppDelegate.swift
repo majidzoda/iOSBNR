@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  LootLogger
+//  Mandala
 //
-//  Created by Firdavsii Majidzoda on 1/13/23.
+//  Created by Firdavsii Majidzoda on 1/24/23.
 //
 
 import UIKit

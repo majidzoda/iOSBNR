@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  LootLogger
+//  Mandala
 //
-//  Created by Firdavsii Majidzoda on 1/13/23.
+//  Created by Firdavsii Majidzoda on 1/24/23.
 //
 
 import UIKit
@@ -17,18 +17,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        // Create and ImageStore
-        let imageStore = ImageStore()
-        
-        // Create an ItemStore
-        let itemStore = ItemStore()
-        
-        // Access the ItemViewController and set its item store
-        let navController = window!.rootViewController as! UINavigationController
-        let itemViewController = navController.topViewController as! ItemsViewController
-        itemViewController.itemStore = itemStore
-        itemViewController.imageStore = imageStore
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

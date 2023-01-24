@@ -1,13 +1,13 @@
 //
-//  LootLoggerUITests.swift
-//  LootLoggerUITests
+//  MandalaUITests.swift
+//  MandalaUITests
 //
-//  Created by Firdavsii Majidzoda on 1/13/23.
+//  Created by Firdavsii Majidzoda on 1/24/23.
 //
 
 import XCTest
 
-class LootLoggerUITests: XCTestCase {
+class MandalaUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
