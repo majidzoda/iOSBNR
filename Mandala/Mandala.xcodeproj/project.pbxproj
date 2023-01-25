@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		91BDBDF22980A30D00CB19F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBDF12980A30D00CB19F9 /* AppDelegate.swift */; };
 		91BDBDF42980A30D00CB19F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBDF32980A30D00CB19F9 /* SceneDelegate.swift */; };
-		91BDBDF62980A30D00CB19F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBDF52980A30D00CB19F9 /* ViewController.swift */; };
+		91BDBDF62980A30D00CB19F9 /* MoodSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBDF52980A30D00CB19F9 /* MoodSelectionViewController.swift */; };
 		91BDBDF92980A30D00CB19F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91BDBDF72980A30D00CB19F9 /* Main.storyboard */; };
 		91BDBDFB2980A30D00CB19F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91BDBDFA2980A30D00CB19F9 /* Assets.xcassets */; };
 		91BDBDFE2980A30D00CB19F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91BDBDFC2980A30D00CB19F9 /* LaunchScreen.storyboard */; };
@@ -43,7 +43,7 @@
 		91BDBDEE2980A30D00CB19F9 /* Mandala.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mandala.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91BDBDF12980A30D00CB19F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91BDBDF32980A30D00CB19F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91BDBDF52980A30D00CB19F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91BDBDF52980A30D00CB19F9 /* MoodSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodSelectionViewController.swift; sourceTree = "<group>"; };
 		91BDBDF82980A30D00CB19F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91BDBDFA2980A30D00CB19F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91BDBDFD2980A30D00CB19F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -87,8 +87,6 @@
 		91BDBDE52980A30D00CB19F9 = {
 			isa = PBXGroup;
 			children = (
-				91BDBE212980A3B100CB19F9 /* Mood.swift */,
-				91BDBE232980A3F000CB19F9 /* MoodEntry.swift */,
 				91BDBDF02980A30D00CB19F9 /* Mandala */,
 				91BDBE072980A30E00CB19F9 /* MandalaTests */,
 				91BDBE112980A30E00CB19F9 /* MandalaUITests */,
@@ -109,9 +107,11 @@
 		91BDBDF02980A30D00CB19F9 /* Mandala */ = {
 			isa = PBXGroup;
 			children = (
+				91BDBE212980A3B100CB19F9 /* Mood.swift */,
+				91BDBE232980A3F000CB19F9 /* MoodEntry.swift */,
 				91BDBDF12980A30D00CB19F9 /* AppDelegate.swift */,
 				91BDBDF32980A30D00CB19F9 /* SceneDelegate.swift */,
-				91BDBDF52980A30D00CB19F9 /* ViewController.swift */,
+				91BDBDF52980A30D00CB19F9 /* MoodSelectionViewController.swift */,
 				91BDBDF72980A30D00CB19F9 /* Main.storyboard */,
 				91BDBDFA2980A30D00CB19F9 /* Assets.xcassets */,
 				91BDBE252980A98B00CB19F9 /* UIColor+Mandala.swift */,
@@ -271,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91BDBE222980A3B100CB19F9 /* Mood.swift in Sources */,
-				91BDBDF62980A30D00CB19F9 /* ViewController.swift in Sources */,
+				91BDBDF62980A30D00CB19F9 /* MoodSelectionViewController.swift in Sources */,
 				91BDBE242980A3F000CB19F9 /* MoodEntry.swift in Sources */,
 				91BDBDF22980A30D00CB19F9 /* AppDelegate.swift in Sources */,
 				91BDBE262980A98B00CB19F9 /* UIColor+Mandala.swift in Sources */,
