@@ -18,6 +18,8 @@
 		91BDBE152980A30E00CB19F9 /* MandalaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBE142980A30E00CB19F9 /* MandalaUITestsLaunchTests.swift */; };
 		91BDBE222980A3B100CB19F9 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBE212980A3B100CB19F9 /* Mood.swift */; };
 		91BDBE242980A3F000CB19F9 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBE232980A3F000CB19F9 /* MoodEntry.swift */; };
+		91BDBE262980A98B00CB19F9 /* UIColor+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBE252980A98B00CB19F9 /* UIColor+Mandala.swift */; };
+		91BDBE282980AAFD00CB19F9 /* UIImage+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BDBE272980AAFD00CB19F9 /* UIImage+Mandala.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		91BDBE142980A30E00CB19F9 /* MandalaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MandalaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		91BDBE212980A3B100CB19F9 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
 		91BDBE232980A3F000CB19F9 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
+		91BDBE252980A98B00CB19F9 /* UIColor+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Mandala.swift"; sourceTree = "<group>"; };
+		91BDBE272980AAFD00CB19F9 /* UIImage+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Mandala.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 				91BDBDF52980A30D00CB19F9 /* ViewController.swift */,
 				91BDBDF72980A30D00CB19F9 /* Main.storyboard */,
 				91BDBDFA2980A30D00CB19F9 /* Assets.xcassets */,
+				91BDBE252980A98B00CB19F9 /* UIColor+Mandala.swift */,
+				91BDBE272980AAFD00CB19F9 /* UIImage+Mandala.swift */,
 				91BDBDFC2980A30D00CB19F9 /* LaunchScreen.storyboard */,
 				91BDBDFF2980A30D00CB19F9 /* Info.plist */,
 			);
@@ -268,6 +274,8 @@
 				91BDBDF62980A30D00CB19F9 /* ViewController.swift in Sources */,
 				91BDBE242980A3F000CB19F9 /* MoodEntry.swift in Sources */,
 				91BDBDF22980A30D00CB19F9 /* AppDelegate.swift in Sources */,
+				91BDBE262980A98B00CB19F9 /* UIColor+Mandala.swift in Sources */,
+				91BDBE282980AAFD00CB19F9 /* UIImage+Mandala.swift in Sources */,
 				91BDBDF42980A30D00CB19F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
