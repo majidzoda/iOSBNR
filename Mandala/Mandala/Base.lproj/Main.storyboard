@@ -68,29 +68,33 @@
                                 </connections>
                             </containerView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SNO-Wj-qBD">
-                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="788" width="414" height="108"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Sj2-WF-wd0">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="8M2-F1-ja4">
-                                            <rect key="frame" x="8" y="8" width="398" height="50"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jqs-Q8-ARB" customClass="ImageSelector" customModule="Mandala" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="16" width="398" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="VKC-8S-jlV"/>
+                                                <constraint firstAttribute="height" constant="50" id="9t4-SB-PZn"/>
                                             </constraints>
-                                        </stackView>
+                                            <connections>
+                                                <action selector="moodSelectionChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="oqu-zN-Ts6"/>
+                                            </connections>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="8M2-F1-ja4" secondAttribute="trailing" id="2sc-cB-jiM"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="8M2-F1-ja4" secondAttribute="bottom" id="8oA-VC-1Pj"/>
-                                        <constraint firstItem="8M2-F1-ja4" firstAttribute="leading" secondItem="Sj2-WF-wd0" secondAttribute="leadingMargin" id="lS8-cS-auB"/>
-                                        <constraint firstItem="8M2-F1-ja4" firstAttribute="top" secondItem="Sj2-WF-wd0" secondAttribute="top" constant="8" id="x3D-MZ-qk6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jqs-Q8-ARB" secondAttribute="trailing" id="DkA-wd-GB3"/>
+                                        <constraint firstItem="jqs-Q8-ARB" firstAttribute="top" secondItem="Sj2-WF-wd0" secondAttribute="topMargin" constant="8" id="pCv-XG-Yzb"/>
+                                        <constraint firstItem="jqs-Q8-ARB" firstAttribute="bottom" secondItem="Sj2-WF-wd0" secondAttribute="bottomMargin" id="s2e-fr-Z6P"/>
+                                        <constraint firstItem="jqs-Q8-ARB" firstAttribute="leading" secondItem="Sj2-WF-wd0" secondAttribute="leadingMargin" id="xyb-s0-yqf"/>
                                     </constraints>
                                 </view>
                                 <blurEffect style="regular"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-Xa-57c">
-                                <rect key="frame" x="103.5" y="728" width="207" height="48"/>
+                                <rect key="frame" x="103.5" y="720" width="207" height="48"/>
                                 <color key="backgroundColor" name="angryRed"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="gCW-Ly-Gs1"/>
@@ -121,12 +125,12 @@
                     </view>
                     <connections>
                         <outlet property="addMoodButton" destination="3hl-Xa-57c" id="EAN-wo-XOV"/>
-                        <outlet property="stackView" destination="8M2-F1-ja4" id="iBy-mh-3PV"/>
+                        <outlet property="moodSelector" destination="jqs-Q8-ARB" id="GtO-7K-SPd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-619" y="116"/>
+            <point key="canvasLocation" x="-620.28985507246387" y="115.84821428571428"/>
         </scene>
     </scenes>
     <resources>

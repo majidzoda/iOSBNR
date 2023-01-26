@@ -50,7 +50,7 @@ class MoodSelectionViewController: UIViewController {
         addMoodButton.layer.cornerRadius = addMoodButton.bounds.height / 2
     }
     
-    @objc func moodSelectionChanged(_ sender: ImageSelector) {
+    @IBAction func moodSelectionChanged(_ sender: ImageSelector) {
 //        guard let selectedIndex = moodButtons.firstIndex(of: sender) else {
 //            preconditionFailure("Unable to find the tapped button in the buttons array.")
 //        }
