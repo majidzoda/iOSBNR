@@ -5,6 +5,8 @@ class MoodSelectionViewController: UIViewController {
     @IBOutlet var stackView: UIStackView!
     @IBOutlet var addMoodButton: UIButton!
     
+    var moodsConfigurable: MoodConfigurable!
+    
     var moods: [Mood] = [] {
         didSet {
             currentMood = moods.first
@@ -52,6 +54,29 @@ class MoodSelectionViewController: UIViewController {
             preconditionFailure("Unable to find the tapped button in the buttons array.")
         }
         currentMood = moods[selectedIndex]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "embedContainerViewController":
+            guard let moodsConfigurable = segue.destination as? MoodConfigurable else {
+                preconditionFailure("View controller expected to conform to MoosdConfigurable")
+            }
+            self.moodsConfigurable = moodsConfigurable
+            segue.destination.additionalSafeAreaInsets = UIEdgeInsets(top: 0, left: 0, bottom: 160, right: 0)
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
+    
+    @IBAction func addMoodTapped(_ sender: Any) {
+        guard let currentMood = currentMood else {
+            return
+        }
+        
+        let newMoodEntry = MoodEntry(mood: currentMood, timestamp: Date())
+        moodsConfigurable.add(newMoodEntry)
+        
     }
 }
 
