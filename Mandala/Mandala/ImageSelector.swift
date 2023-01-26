@@ -40,6 +40,7 @@ class ImageSelector: UIControl {
         }
         
         selectedIndex = buttonIndex
+        sendActions(for: .valueChanged)
     }
     
     override init(frame: CGRect) {
