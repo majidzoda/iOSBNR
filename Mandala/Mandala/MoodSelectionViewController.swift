@@ -24,7 +24,13 @@ class MoodSelectionViewController: UIViewController {
             }
             
             addMoodButton?.setTitle("I'm \(currentMood.name)", for: .normal)
-            addMoodButton?.backgroundColor = currentMood.color
+//            addMoodButton?.backgroundColor = currentMood.color
+            let selectionAnimator = UIViewPropertyAnimator(duration: 0.3,
+                                                           dampingRatio: 0.7,
+                                                           animations: {
+                self.addMoodButton.backgroundColor = currentMood.color
+            })
+            selectionAnimator.startAnimation()
 
         }
     }
