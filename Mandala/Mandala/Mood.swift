@@ -39,4 +39,3 @@ extension Mood {
                             image: UIImage(resource: .sleepy),
                             color: UIColor.sleepy)
 }
-

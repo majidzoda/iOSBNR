@@ -10,24 +10,9 @@ class MoodSelectionViewController: UIViewController {
     var moods: [Mood] = [] {
         didSet {
             currentMood = moods.first
-//            moodButtons = moods.map { mood in
-//                let moodButton = UIButton()
-//                moodButton.setImage(mood.image, for: .normal)
-//                moodButton.imageView?.contentMode = .scaleAspectFill
-//                moodButton.adjustsImageWhenHighlighted = false
-//                moodButton.addTarget(self, action: #selector(moodSelectionChanged(_:)), for: .touchUpInside)
-//                return moodButton
-//            }
             moodSelector.images = moods.map { $0.image }
         }
     }
-    
-//    var moodButtons: [UIButton] = [] {
-//        didSet {
-//            oldValue.forEach { $0.removeFromSuperview() }
-//            moodButtons.forEach { stackView.addArrangedSubview($0) }
-//        }
-//    }
     
     var currentMood: Mood? {
         didSet {
@@ -51,9 +36,7 @@ class MoodSelectionViewController: UIViewController {
     }
     
     @IBAction func moodSelectionChanged(_ sender: ImageSelector) {
-//        guard let selectedIndex = moodButtons.firstIndex(of: sender) else {
-//            preconditionFailure("Unable to find the tapped button in the buttons array.")
-//        }
+
         let selectedIndex = sender.selectedIndex
         currentMood = moods[selectedIndex]
     }
