@@ -1,7 +1,7 @@
 import UIKit
 
 class MoodListViewController: UITableViewController {
-    var moodEntries: [MoodEntry] = []
+    private var moodEntries: [MoodEntry] = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moodEntries.count

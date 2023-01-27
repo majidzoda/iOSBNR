@@ -7,7 +7,7 @@ class MoodSelectionViewController: UIViewController {
     
     var moodsConfigurable: MoodConfigurable!
     
-    var moods: [Mood] = [] {
+    private var moods: [Mood] = [] {
         didSet {
             currentMood = moods.first
 //            moodButtons = moods.map { mood in
