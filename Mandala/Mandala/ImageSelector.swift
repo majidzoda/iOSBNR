@@ -11,6 +11,20 @@ class ImageSelector: UIControl {
         return stackView
     }()
     
+    var highlitColors: [UIColor] = [] {
+        didSet {
+            highlightedView.backgroundColor = highlightColor(forIndex: selectedIndex)
+        }
+    }
+    
+    private func highlightColor(forIndex index: Int) -> UIColor {
+        guard index >= 0 && index < highlitColors.count else {
+            return UIColor.blue.withAlphaComponent(0.6)
+        }
+        
+        return highlitColors[index]
+    }
+    
     var selectedIndex = 0 {
         didSet {
             if selectedIndex < 0 {
@@ -19,6 +33,8 @@ class ImageSelector: UIControl {
             if selectedIndex >= imageButtons.count {
                 selectedIndex = imageButtons.count - 1
             }
+            
+            highlightedView.backgroundColor = highlightColor(forIndex: selectedIndex)
             
             let imageButton = imageButtons[selectedIndex]
             highlightViewConstraint = highlightedView.centerXAnchor.constraint(equalTo: imageButton.centerXAnchor)
@@ -48,7 +64,6 @@ class ImageSelector: UIControl {
     
     private let highlightedView: UIView = {
        let view = UIView()
-        view.backgroundColor = view.tintColor
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
@@ -64,13 +79,7 @@ class ImageSelector: UIControl {
         guard let buttonIndex = imageButtons.firstIndex(of: sender) else {
             preconditionFailure("The buttons and images are not parallel.")
         }
-        
-//        let selectionAnimator = UIViewPropertyAnimator(duration: 0.3,
-//                                                       curve: .easeInOut,
-//                                                       animations: {
-//            self.selectedIndex = buttonIndex
-//            self.layoutIfNeeded()
-//        })
+
         let selectionAnimator = UIViewPropertyAnimator(duration: 0.3,
                                                        dampingRatio: 0.7,
                                                        animations: {
