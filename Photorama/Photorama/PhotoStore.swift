@@ -16,13 +16,16 @@ class PhotoStore {
         
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) { (data, response, error) in
-            
+            if let httpsResponse = response as? HTTPURLResponse{
+                print("\nstatusCode: \(httpsResponse.statusCode)\nallheaderFields:")
+                httpsResponse.allHeaderFields.forEach { print("\($0.key) : \($0.value)") }
+            }
             let result = self.processPhotosRequest(data: data, error: error)
             OperationQueue.main.addOperation {
                 completion(result)
             }
         }
-        
+    
         task.resume()
     }
     
@@ -35,7 +38,7 @@ class PhotoStore {
         return FlickrAPI.photos(fromJSON: jsonData)
     }
     
-    func fetchImage(for photo: Photo,
+    func gi(for photo: Photo,
                     completion: @escaping (Result<UIImage, Error>) -> Void) {
         guard let photoURL = photo.remoteURL else {
             completion(.failure(PhotoError.missingImageURL))
@@ -45,7 +48,10 @@ class PhotoStore {
         
         let task = session.dataTask(with: request) {
             (data, response, error) in
-            
+            if let httpsResponse = response as? HTTPURLResponse{
+                print("\nstatusCode: \(httpsResponse.statusCode)\nallheaderFields:")
+                httpsResponse.allHeaderFields.forEach { print("\($0.key) : \($0.value)") }
+            }
             let result = self.processImageRequest(data: data, error: error)
             OperationQueue.main.addOperation {
                 completion(result)

@@ -8,6 +8,7 @@ class PhotosViewController: UIViewController {
         
         store.fetchInterestingPhotos {
             (photoResult) in
+            
             switch photoResult {
             case let .success(photos):
                 print("Successfully found \(photos.count) photos")
