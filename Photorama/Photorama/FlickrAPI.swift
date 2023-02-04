@@ -39,3 +39,19 @@ struct FlickrAPI {
         return flickrURL(endPoint: .interestingPhotos, parameters: ["extras" : "url_z,date_taken"])
     }
 }
+
+struct FlickrResponse: Codable {
+    let photosInfo: FlickrPhotoResponse
+    
+    enum CodingKeys: String, CodingKey {
+        case photosInfo = "photos"
+    }
+}
+
+struct FlickrPhotoResponse: Codable {
+    let photos: [Photo]
+    
+    enum CodingKeys: String, CodingKey {
+        case photos = "photo"
+    }
+}
