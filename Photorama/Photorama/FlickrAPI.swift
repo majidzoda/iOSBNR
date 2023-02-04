@@ -38,6 +38,25 @@ struct FlickrAPI {
     static var interestingPhotosURL: URL {
         return flickrURL(endPoint: .interestingPhotos, parameters: ["extras" : "url_z,date_taken"])
     }
+    
+    static func photos(fromJSON data: Data) -> Result<[Photo], Error> {
+        do {
+            let decoder = JSONDecoder()
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+            dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+            decoder.dateDecodingStrategy = .formatted(dateFormatter)
+            
+            let flickrRespoonse = try decoder.decode(FlickrResponse.self, from: data)
+            
+            let photos = flickrRespoonse.photosInfo.photos.filter { $0.remoteURL != nil }
+            return .success(photos)
+        } catch {
+            return .failure(error)
+        }
+    }
 }
 
 struct FlickrResponse: Codable {
