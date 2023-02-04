@@ -2,11 +2,18 @@ import UIKit
 class PhotosViewController: UIViewController {
     @IBOutlet private var imageView: UIImageView!
     var store: PhotoStore!
-    
+    var endPoint: EndPoint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        switch endPoint! {
+        case EndPoint.recentPhotos:
+            navigationItem.title = "Recent Photos"
+        case EndPoint.interestingPhotos:
+            navigationItem.title  = "Interesting Photos"
+        }
         
-        store.fetchInterestingPhotos {
+        
+        store.fetchPhotos(endPoint: endPoint) {
             (photoResult) in
             
             switch photoResult {

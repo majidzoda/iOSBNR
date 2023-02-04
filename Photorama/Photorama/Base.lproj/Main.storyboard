@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Photorama-->
+        <!--Photos View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="PhotosViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,14 +29,83 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kRf-mY-1D2" secondAttribute="trailing" id="tmr-Xl-JUR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Photorama" id="ZGW-n8-91A"/>
+                    <navigationItem key="navigationItem" id="ZGW-n8-91A"/>
                     <connections>
                         <outlet property="imageView" destination="kRf-mY-1D2" id="xEt-sY-VIi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="971.01449275362324" y="105.80357142857143"/>
+            <point key="canvasLocation" x="1839" y="106"/>
+        </scene>
+        <!--Photorama-->
+        <scene sceneID="mvP-4F-ZGm">
+            <objects>
+                <viewController id="dVB-Om-Zcc" customClass="PhotoramaViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Gb-4M-4Gp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-VV-LRG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJ7-Es-n1T">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y16-gp-0dx">
+                                                <rect key="frame" x="136" y="178" width="142" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Interesting Photos"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="interestingPhotosSegue" id="xzV-4T-i6Z"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Y16-gp-0dx" firstAttribute="centerY" secondItem="cJ7-Es-n1T" secondAttribute="centerY" id="sHV-Xs-Bfc"/>
+                                            <constraint firstItem="Y16-gp-0dx" firstAttribute="centerX" secondItem="cJ7-Es-n1T" secondAttribute="centerX" id="vdD-yx-4Q0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L23-dQ-0wM">
+                                        <rect key="frame" x="0.0" y="387" width="414" height="387"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOI-wr-nk0">
+                                                <rect key="frame" x="148" y="178" width="118" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Recent Photos"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" identifier="recentPhotosSegue" id="T7c-yS-12u"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="MOI-wr-nk0" firstAttribute="centerY" secondItem="L23-dQ-0wM" secondAttribute="centerY" id="3cA-JH-DjF"/>
+                                            <constraint firstItem="MOI-wr-nk0" firstAttribute="centerX" secondItem="L23-dQ-0wM" secondAttribute="centerX" id="tRF-3Q-8zf"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EOe-6a-lRF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b4z-VV-LRG" firstAttribute="top" secondItem="EOe-6a-lRF" secondAttribute="top" id="3Sm-AF-nkx"/>
+                            <constraint firstItem="EOe-6a-lRF" firstAttribute="trailing" secondItem="b4z-VV-LRG" secondAttribute="trailing" id="Dhh-Bl-RW7"/>
+                            <constraint firstItem="b4z-VV-LRG" firstAttribute="leading" secondItem="EOe-6a-lRF" secondAttribute="leading" id="SzH-gk-kDh"/>
+                            <constraint firstItem="EOe-6a-lRF" firstAttribute="bottom" secondItem="b4z-VV-LRG" secondAttribute="bottom" id="aua-zP-We9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photorama" id="IsX-Wn-2WZ"/>
+                    <connections>
+                        <outlet property="interestingPhotosButton" destination="Y16-gp-0dx" id="evP-hZ-TF8"/>
+                        <outlet property="recentPhotosButton" destination="MOI-wr-nk0" id="zyR-hz-Hy3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9p-xg-KHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="63u-os-DJT">
@@ -49,7 +118,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="le4-3A-s4Y"/>
+                        <segue destination="dVB-Om-Zcc" kind="relationship" relationship="rootViewController" id="2QF-XG-Ue9"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVx-CV-glN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -57,6 +126,9 @@
             <point key="canvasLocation" x="60.869565217391312" y="105.80357142857143"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="T7c-yS-12u"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

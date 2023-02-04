@@ -19,6 +19,7 @@
 		9150E7A4298D739500650AAF /* FlickrAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9150E7A3298D739500650AAF /* FlickrAPI.swift */; };
 		9150E7A6298D961000650AAF /* PhotoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9150E7A5298D961000650AAF /* PhotoStore.swift */; };
 		91CDBC59298ED23100738791 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDBC58298ED23100738791 /* Photo.swift */; };
+		91CDBC5B298F04F900738791 /* PhotoramaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CDBC5A298F04F900738791 /* PhotoramaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9150E7A3298D739500650AAF /* FlickrAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAPI.swift; sourceTree = "<group>"; };
 		9150E7A5298D961000650AAF /* PhotoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStore.swift; sourceTree = "<group>"; };
 		91CDBC58298ED23100738791 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		91CDBC5A298F04F900738791 /* PhotoramaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoramaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				9150E773298D6DC800650AAF /* AppDelegate.swift */,
 				9150E775298D6DC800650AAF /* SceneDelegate.swift */,
 				9150E777298D6DC800650AAF /* PhotosViewController.swift */,
+				91CDBC5A298F04F900738791 /* PhotoramaViewController.swift */,
 				9150E779298D6DC800650AAF /* Main.storyboard */,
 				9150E7A3298D739500650AAF /* FlickrAPI.swift */,
 				91CDBC58298ED23100738791 /* Photo.swift */,
@@ -270,6 +273,7 @@
 				91CDBC59298ED23100738791 /* Photo.swift in Sources */,
 				9150E7A6298D961000650AAF /* PhotoStore.swift in Sources */,
 				9150E778298D6DC800650AAF /* PhotosViewController.swift in Sources */,
+				91CDBC5B298F04F900738791 /* PhotoramaViewController.swift in Sources */,
 				9150E774298D6DC800650AAF /* AppDelegate.swift in Sources */,
 				9150E776298D6DC800650AAF /* SceneDelegate.swift in Sources */,
 				9150E7A4298D739500650AAF /* FlickrAPI.swift in Sources */,

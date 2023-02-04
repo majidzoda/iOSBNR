@@ -1,10 +1,12 @@
 import Foundation
-
 enum EndPoint: String {
     case interestingPhotos = "flickr.interestingness.getList"
+    case recentPhotos = "flickr.photos.getRecent"
 }
 
 struct FlickrAPI {
+
+
     private static let baseURLString = "https://api.flickr.com/services/rest"
     private static let apiKey = "a6d819499131071f158fd740860a5a88"
     
@@ -35,8 +37,12 @@ struct FlickrAPI {
         return components.url!
     }
     
-    static var interestingPhotosURL: URL {
-        return flickrURL(endPoint: .interestingPhotos, parameters: ["extras" : "url_z,date_taken"])
+//    static var interestingPhotosURL: URL {
+//        return flickrURL(endPoint: .interestingPhotos, parameters: ["extras" : "url_z,date_taken"])
+//    }
+    
+    static func getURL(for endPoint: EndPoint) -> URL {
+        return flickrURL(endPoint: endPoint, parameters: ["extras" : "url_z,date_taken"])
     }
     
     static func photos(fromJSON data: Data) -> Result<[Photo], Error> {

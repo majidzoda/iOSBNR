@@ -11,8 +11,8 @@ class PhotoStore {
         return URLSession(configuration: config)
     }()
     
-    func fetchInterestingPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {
-        let url = FlickrAPI.interestingPhotosURL
+    func fetchPhotos(endPoint: EndPoint, completion: @escaping (Result<[Photo], Error>) -> Void) {
+        let url = FlickrAPI.getURL(for: endPoint)
         
         let request = URLRequest(url: url)
         let task = session.dataTask(with: request) { (data, response, error) in
@@ -38,7 +38,7 @@ class PhotoStore {
         return FlickrAPI.photos(fromJSON: jsonData)
     }
     
-    func gi(for photo: Photo,
+    func fetchImage(for photo: Photo,
                     completion: @escaping (Result<UIImage, Error>) -> Void) {
         guard let photoURL = photo.remoteURL else {
             completion(.failure(PhotoError.missingImageURL))
