@@ -30,6 +30,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Photorama" id="ZGW-n8-91A"/>
+                    <connections>
+                        <outlet property="imageView" destination="kRf-mY-1D2" id="xEt-sY-VIi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
