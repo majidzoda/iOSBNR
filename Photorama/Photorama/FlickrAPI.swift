@@ -49,9 +49,9 @@ struct FlickrAPI {
             dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
             decoder.dateDecodingStrategy = .formatted(dateFormatter)
             
-            let flickrRespoonse = try decoder.decode(FlickrResponse.self, from: data)
+            let flickrResponse = try decoder.decode(FlickrResponse.self, from: data)
             
-            let photos = flickrRespoonse.photosInfo.photos.filter { $0.remoteURL != nil }
+            let photos = flickrResponse.photosInfo.photos.filter { $0.remoteURL != nil }
             return .success(photos)
         } catch {
             return .failure(error)

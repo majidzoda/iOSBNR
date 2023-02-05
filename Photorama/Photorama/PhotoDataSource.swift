@@ -1,8 +1,16 @@
-//
-//  PhotoDataSource.swift
-//  Photorama
-//
-//  Created by Firdavsii Majidzoda on 2/5/23.
-//
+import UIKit
 
-import Foundation
+class PhotoDataSource: NSObject, UICollectionViewDataSource {
+    
+    var photos = [Photo]()
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let identifier = "PhotoCeollectionViewCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
+        return cell
+    }
+}
