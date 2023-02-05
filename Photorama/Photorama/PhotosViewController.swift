@@ -1,5 +1,5 @@
 import UIKit
-class PhotosViewController: UIViewController {
+class PhotosViewController: UIViewController, UICollectionViewDelegate {
     @IBOutlet private var collectionView: UICollectionView!
     
     var store: PhotoStore!
@@ -9,6 +9,7 @@ class PhotosViewController: UIViewController {
         super.viewDidLoad()
         
         collectionView.dataSource = photoDataSource
+        collectionView.delegate = self
         
         store.fetchInterestingPhotos {
             (photoResult) in
@@ -26,18 +27,27 @@ class PhotosViewController: UIViewController {
         }
     }
     
-//    func updateImageView(for photo: Photo) {
-//        store.fetchImage(for: photo) {
-//            (imageResult) in
-//
-//            switch imageResult {
-//            case let .success(image):
-//                self.imageView.image = image
-//            case let .failure(error):
-//                print("Error downloading image: \(error)")
-//            }
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let photo = photoDataSource.photos[indexPath.row]
+        
+        // Download the image data, wich could take some time
+        store.fetchImage(for: photo) { result in
+            // The index path for the photo might have changed between
+            // the time the request started and finished, so find the most
+            // recent index path
+            guard let photoIndex = self.photoDataSource.photos.firstIndex(of: photo),
+                  case let .success(image) = result else {
+                      return
+                  }
+            let photoIndexPath = IndexPath(item: photoIndex, section: 0)
+            
+            // When the request finishes, find the current cell for this photo
+            if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
+                cell.update(displaying: image)
+            }
+                
+        }
+    }
 }
 
 
