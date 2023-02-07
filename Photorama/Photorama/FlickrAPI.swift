@@ -39,7 +39,7 @@ struct FlickrAPI {
         return flickrURL(endPoint: .interestingPhotos, parameters: ["extras" : "url_z,date_taken"])
     }
     
-    static func photos(fromJSON data: Data) -> Result<[Photo], Error> {
+    static func photos(fromJSON data: Data) -> Result<[FlickrPhoto], Error> {
         do {
             let decoder = JSONDecoder()
             
@@ -68,7 +68,7 @@ struct FlickrResponse: Codable {
 }
 
 struct FlickrPhotoResponse: Codable {
-    let photos: [Photo]
+    let photos: [FlickrPhoto]
     
     enum CodingKeys: String, CodingKey {
         case photos = "photo"

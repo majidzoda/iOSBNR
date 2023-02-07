@@ -40,7 +40,9 @@ class PhotoStore {
     func fetchImage(for photo: Photo,
                     completion: @escaping (Result<UIImage, Error>) -> Void) {
         
-        let photoKey = photo.photoID
+        guard let photoKey = photo.photoID else {
+            preconditionFailure("Photo expected to have a photoID")
+        }
         if let image = imageStore.image(forKey: photoKey) {
             OperationQueue.main.addOperation {
                 completion(.success(image))
