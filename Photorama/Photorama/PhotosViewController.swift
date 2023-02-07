@@ -27,6 +27,18 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         }
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        guard let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
+            return
+        }
+        
+        let availalbeWidth = collectionView.bounds.inset(by: collectionView.layoutMargins).width
+        let cellWidth = (availalbeWidth / 4).rounded(.down)
+        layout.itemSize.width = cellWidth
+    }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let photo = photoDataSource.photos[indexPath.row]
         
