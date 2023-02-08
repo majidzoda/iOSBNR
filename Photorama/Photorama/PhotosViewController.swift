@@ -63,6 +63,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 
                 let destinationVC = segue.destination as! PhotoInfoViewController
                 destinationVC.photo = photo
+                destinationVC.photo.vitewsTotal += 1
                 destinationVC.store = store
             }
         default:
