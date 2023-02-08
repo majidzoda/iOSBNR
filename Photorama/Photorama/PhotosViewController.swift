@@ -29,6 +29,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             case .failure:
                 self.photoDataSource.photos.removeAll()
             }
+            
             self.collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
@@ -63,7 +64,12 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
                 
                 let destinationVC = segue.destination as! PhotoInfoViewController
                 destinationVC.photo = photo
-                destinationVC.photo.vitewsTotal += 1
+                store.persistantContainer.viewContext.performAndWait {
+                    destinationVC.photo.vitewsTotal += 1
+                }
+                try? store.persistantContainer.viewContext.save()
+                
+                
                 destinationVC.store = store
             }
         default:

@@ -5,7 +5,6 @@ class PhotoInfoViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var viewedLabel: UILabel!
     
-    
     var photo: Photo! {
         didSet {
             navigationItem.title = photo.title
@@ -24,7 +23,6 @@ class PhotoInfoViewController: UIViewController {
                 
             case let .failure(error):
                 print("Error fetching image for photo: \(error)")
-                
             }
         }
     }
