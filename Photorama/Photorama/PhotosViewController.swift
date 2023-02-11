@@ -51,7 +51,6 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             if let cell = self.collectionView.cellForItem(at: photoIndexPath) as? PhotoCollectionViewCell {
                 cell.update(displaying: image)
             }
-                
         }
     }
     
@@ -70,5 +69,3 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         }
     }
 }
-
-
