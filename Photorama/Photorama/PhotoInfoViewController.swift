@@ -13,7 +13,7 @@ class PhotoInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        displayFavorite()
         store.fetchImage(for: photo) { (result) in
             switch result {
             case let .success(image):
@@ -23,6 +23,16 @@ class PhotoInfoViewController: UIViewController {
                 
             }
         }
+    }
+    
+    private func displayFavorite(){
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: photo.isFavorite ? "star.fill" : "star"), style: .plain, target: self, action: #selector(favoritePhoto))
+    }
+    
+    @objc func favoritePhoto(){
+        photo.isFavorite = !photo.isFavorite
+        try? store.persistantContainer.viewContext.save()
+        navigationItem.rightBarButtonItem?.image = UIImage(systemName: photo.isFavorite ? "star.fill" : "star")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

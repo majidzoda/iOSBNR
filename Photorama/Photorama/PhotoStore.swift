@@ -87,6 +87,7 @@ class PhotoStore {
                         photo.photoID = flickrPhoto.photoID
                         photo.remoteURL = flickrPhoto.remoteURL
                         photo.dateTaken = flickrPhoto.dateTaken
+                        photo.isFavorite = false
                     }
                     return photo
                 }
