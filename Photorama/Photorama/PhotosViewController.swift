@@ -23,6 +23,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         updateDataSource()
     }
     
@@ -63,6 +64,7 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
             preconditionFailure("Invalid segment index.")
         }
     }
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         let photo = photoDataSource.photos[indexPath.row]
         

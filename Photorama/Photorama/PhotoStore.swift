@@ -42,9 +42,7 @@ class PhotoStore {
         task.resume()
     }
     
-    private func processPhotosRequest(data: Data?,
-                                      error: Error?,
-                                      completion: @escaping (Result<[Photo], Error>) -> Void) {
+    private func processPhotosRequest(data: Data?, error: Error?, completion: @escaping (Result<[Photo], Error>) -> Void) {
         guard let jsonData = data else {
             completion(.failure(error!))
             return
@@ -65,8 +63,7 @@ class PhotoStore {
                     if let existingPhoto = fetchedPhotos?.first {
                         return existingPhoto
                     }
-                    
-                    
+        
                     var photo: Photo!
                     context.performAndWait {
                         photo = Photo(context: context)
@@ -95,8 +92,6 @@ class PhotoStore {
                 completion(.failure(error))
             }
         }
-        
-        
     }
     
     func fetchAllPhotos(completion: @escaping (Result<[Photo], Error>) -> Void) {

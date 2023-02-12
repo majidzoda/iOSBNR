@@ -34,19 +34,6 @@ class PhotoInfoViewController: UIViewController {
         photo.isFavorite = !photo.isFavorite
         try? store.persistantContainer.viewContext.save()
         navigationItem.rightBarButtonItem?.image = UIImage(systemName: photo.isFavorite ? "star.fill" : "star")
-        
-        
-//        if photo.isFavorite {
-//            if !favoritesDataStore.photos.contains { $0.objectID == photo.objectID } {
-//                favoritesDataStore.photos.append(photo)
-//            }
-//
-//        } else {
-//            if let index = favoritesDataStore.photos.firstIndex(where: { $0.objectID == photo.objectID }) {
-//                favoritesDataStore.photos.remove(at: index)
-//            }
-//        }
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
