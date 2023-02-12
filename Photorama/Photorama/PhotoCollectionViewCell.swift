@@ -7,6 +7,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     
     
     func update(displaying image: UIImage?) {
+        
         if let imageToDisplay = image {
             spinner.stopAnimating()
             imageView.image = imageToDisplay
